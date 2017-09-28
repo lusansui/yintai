@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/activitv.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<title></title>
+	</head>
+	<body>
+		<div id='doc'>
+			<!--第一部分开始-->
+			<section id='hd'>
+				<div id='hdtop'>
+				<div class='top-side'>
+					<nav class='top-entry'>
+						<li><a href='home_page.html' class='collect'><s></s>银泰首页</a></li>
+						<li class="separator"></li>
+						<li class='wechat'>
+							<div class='log-wechat'>
+								<a href="#" class='wechat1'>
+									<s></s>微信<b></b><span class='blank'></span>
+								</a>
+								<div class='yt-wechat'>
+									<img src="image/wechat.png" /> 
+								</div>
+							</div>
+							
+						</li>
+						<li class="separator"></li>
+						<li class='log-yt-phone'>
+							<div class='log-phone'>
+								<a href="#" class='log-link'>
+									<s></s>手机银泰<b></b><span class='blank'></span>
+								</a>
+								<div class='yt-phone'>
+									<img src="image/appphone.png" /> 
+								</div>
+							</div>
+							
+						</li>
+					</nav>
+					<script>
+						$(function(){
+							$(".top-entry li .collect").mouseover(function(){
+								$(this).children("s").css({"backgroundPosition":"-225px -27px"})
+							})
+							$(".top-entry li .collect").mouseout(function(){
+								$(this).children("s").css({"backgroundPosition":"-225px 0px"})
+							})
+							$(".log-wechat .wechat1").mouseover(function(){
+								$(this).css({"background":"white"})
+								$(this).children("s").css({"backgroundPosition":"-225px -87px"});
+								$(this).children("b").css({"backgroundPosition":"-175px -128px",
+								"transform":"rotate(180deg )"});
+								$(this).children(".blank").css({"display":"block"})
+								$(".yt-wechat").css({"display":"block"})
+							})
+							$(".log-wechat .wechat1").mouseout(function(){
+								$(this).css({"background":""})
+								$(this).children("s").css({"backgroundPosition":"-225px -57px"});
+								$(this).children("b").css({"backgroundPosition":"-175px -111px",
+								"transform":"rotate(0)"});
+								$(this).children(".blank").css({"display":"none"});
+								$(".yt-wechat").css({"display":"none"})
+								
+							})
+//							手机银泰
+							$(".log-yt-phone .log-link").mouseover(function(){
+								$(this).css({"background":"white"})
+								$(this).children("s").css({"backgroundPosition":"center bottom"});
+								$(this).children("b").css({"backgroundPosition":"-175px -128px",
+								"transform":"rotate(180deg)"});
+								$(this).children(".blank").css({"display":"block"})
+								$(".yt-phone").css({"display":"block"})
+							})
+							$(".log-yt-phone .log-link").mouseout(function(){
+								$(this).css({"background":""})
+								$(this).children("s").css({"backgroundPosition":"center 0"});
+								$(this).children("b").css({"backgroundPosition":"-175px -111px",
+								"transform":"rotate(0)"});
+								$(this).children(".blank").css({"display":"none"});
+								$(".yt-phone").css({"display":"none"})
+								
+								
+								
+							})
+						})
+						
+					</script>
+					<ul class='top-logs'>
+						<li class='log-user'>
+							<span class="welcome">Hi，欢迎来到银泰网！</span>
+							<a href="#" class='login'>登录</a>
+							<a href="#" class='reg'>注册</a>
+						</li>
+						<li class="separator"></li>
+						<li><a href='#' style="height:26px;padding:8px 10px 0">我的订单</a></li>
+						<li class="separator"></li>
+						<li class='log-yt-home'>
+							<div>
+								<a href="#" class='log-link'>
+									我的银泰
+									<b></b>
+									<span class="blank"></span>
+								</a>
+								<div class='yt-myhome'>
+									<p><a href='#'>我的收藏</a></p>
+									<p><a href='#'>我的余额</a></p>
+									<p><a href='#'>我的银元</a></p>
+									<p><a href='#'>我的银泰卡</a></p>
+									<p><a href='#'>我的优惠券</a></p>
+									<p><a href='#'>我的积分</a></p>
+									
+								</div>
+								<script>
+									$(function(){
+										$(".log-yt-home .log-link").mouseover(function(){
+											$(".yt-myhome").css({"display":"block"});
+											$(this).css("background","white");
+											$(this).children("b").css({"backgroundPosition":"-175px -128px",
+								"transform":"rotate(180deg)"})
+											$(this).children(".blank").css("display","block")
+										})
+										$(".log-yt-home .log-link").mouseout(function(){
+											$(".yt-myhome").css({"display":"none"});
+											$(this).css("background","");
+											$(this).children("b").css({"backgroundPosition":"-175px -111px",
+								"transform":"rotate(0deg)"})
+											$(this).children(".blank").css("display","none")
+										})
+									})
+									
+								</script>
+							</div>
+						</li>
+						<li class="separator"></li>
+						<li><a href='#' style="height:26px;padding:8px 10px 0">银泰卡</a></li>
+						<li class="separator"></li>
+						<li><a href='#' style="height:26px;padding:8px 10px 0">帮助中心</a></li>
+					</ul>
+				</div>
+				</div>
+				<div class='top-banner'>
+					<a href='#'>
+			
+					</a>
+				</div>
+				<div class='hdmain'>
+					<div class='top-main'>
+						<h1><a href='#'>
+							<img src="image/header-01.png"></a></h1>
+						<div class="itype"></div>
+						<div id="J-MiniCart" class="icart">
+			                <a href="#" class='minishop'>
+			                    <span>购物袋<strong id="J-CartCount">0</strong>件</span>
+			                    <b></b>
+			                </a>
+		                	<div id="J-ShopCart">
+		                		<div class="yt-bags-nothing">购物袋中还没有商品，赶快选购吧！</div>
+		                	</div>
+		                	<script>
+		                		$(".icart").hover(function(){
+		                			$("#J-ShopCart").show();
+		                		},function(){
+		                			$("#J-ShopCart").hide()
+		                		})
+		                	</script>
+		            	</div>
+		            	<div class='isearch'>
+		            		<div class='searchbox'>
+		            			<input type="text" class="place-holder" placeholder="大家正在搜：母婴特卖专场 低至9元">
+		            			<button id="J_SearchBtn">搜索</button>
+		            			<input class="default-attr" type="hidden" >
+		            				
+		            		</div>
+		            		<div id="hotKeyWord">
+                            			<a href="#">长袖衬衫</a>
+							            <a href="#">皮肤衣</a>
+							            <a href="#">风衣</a>
+							            <a href="#">科莱丽</a>
+							            <a href="#">短靴</a>
+							            <a href="#">珞炫服饰</a>
+							            <a href="#">塑身文胸</a>
+							            <a href="#">保温杯</a>
+							            <a href="#">秀扬</a>
+
+                			</div>
+		            	</div>
+					</div>
+				</div>
+				<div id='hdmenu'>
+					<div class='top-menu'>
+						<div class='munu-cate'>
+							<a href="#">全部分类</a>
+						</div>
+						
+						<div class='nav-rr'>
+							<a href='#'>积分商城</a>
+							|
+							<a href='#'>全部品牌</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div id="tu">
+			
+				<img src="image/tu1.jpg" />
+				<img src="image/tu2.jpg" />
+				<img src="image/tu3.jpg" />
+				<div class="list">
+				<h1><a href="#"><img src="image/list1.jpg"></a></h1>
+				<h2><a href="#"><img src="image/list2.jpg"></a></h2>
+				<h3><a href="#"><img src="image/list3.jpg"></a></h3>
+				<h4><a href="#"><img src="image/list4.jpg"></a></h4>
+			    </div>
+					<div class="list2">
+				<h1><a href="#"><img src="image/list5.jpg"></a></h1>
+				<h2><a href="#"><img src="image/list6.jpg"></a></h2>
+				<h3><a href="#"><img src="image/list7.jpg"></a></h3>
+				<h4><a href="#"><img src="image/list8.jpg"></a></h4>
+				<h5><a href="#"><img src="image/list9.jpg"></a></h5>
+					</div>
+				
+				</div>
+				<div class='foot'>
+				<span class="service">
+		            <strong>400-119-1111</strong><i>8:00-24:00</i>
+		            <b>service@yintai.com</b>
+		        </span>
+		        <span class="delivery">
+		            <strong><i>15天</i>无忧退换货</strong>
+		            <b>为您提供优质售后服务</b>
+		        </span>
+		        <span class="genuine">
+		            <strong><i>100%</i>正品保证</strong>
+		            <b>品质护航 购物无忧</b>
+		        </span>
+		        <span class="freight">
+		            <strong><i>满199元</i>免运费</strong>
+		            <b>为您提供便利物流</b>
+		        </span>
+			</div>
+			
+				<div class="ilinks">
+                	<a href="#" >关于银泰</a>|
+                	<a href="#" >帮助中心</a>|
+                	<a href="#" >网站地图</a>|
+                	<a href="#">企业客户</a>|
+                	<a href="#">代理合作</a>|
+                	<a href="#">品牌招商</a>|
+                	<a href="#" >商务合作</a>|
+                	<a href="#">网站联盟</a>|
+                	<a href="#" >联系我们</a>|
+                	<a href="#" >加入银泰</a>|
+                	<a href="#" >版权声明</a>|
+                	<a href="#">法律声明</a>
+            	</div>
+            	<div class="copyright">
+	                <p>
+	                    <a href="#">浙ICP备10200233号</a>
+	                    <a href="#">京公网安备110105019085</a>
+	                    <a href="#">增值电信业务经营许可证：浙B2-20110005</a>
+	                </p>
+	                <p>Yintai © 2014, 银泰电子商务有限公司.</p>
+            	</div>
+            	<div class="last">
+            		<a href="" style="width: 112px;height: 40px;"><img src="image/yt-ntegrity.png" /> </a>
+            		<a href="" style="width: 102px;height: 40px;"><img src="image/cnnic.png" style="width: 102px;height: 40px;"/> </a>
+            		<a href="" style="width: 48px;height: 48px;"><img src="image/commerce.gif" /> </a>
+            	</div>
+			</div>
+			
+	
+</html>

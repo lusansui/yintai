@@ -1,0 +1,3309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>主页</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/Home_page.css" />
+		<script src='js/jquery-1.11.1.min.js'></script>	
+		<script type="text/javascript" src="js/jquery.picture.js" ></script>
+		<link rel="stylesheet" href="css/register_page.css" />
+		
+	</head>
+	<body>
+		<div id='doc'>
+			<!--第一部分开始-->
+			<section id='hd'>
+				<div id='hdtop'>
+				<div class='top-side'>
+					<nav class='top-entry'>
+						<li><a href='#' class='collect'><s></s>银泰首页</a></li>
+						<li class="separator"></li>
+						<li class='wechat'>
+							<div class='log-wechat'>
+								<a href="#" class='wechat1'>
+									<s></s>微信<b></b><span class='blank'></span>
+								</a>
+								<div class='yt-wechat'>
+									<img src="image/wechat.png" /> 
+								</div>
+							</div>
+							
+						</li>
+						<li class="separator"></li>
+						<li class='log-yt-phone'>
+							<div class='log-phone'>
+								<a href="#" class='log-link'>
+									<s></s>手机银泰<b></b><span class='blank'></span>
+								</a>
+								<div class='yt-phone'>
+									<img src="image/appphone.png" /> 
+								</div>
+							</div>
+							
+						</li>
+					</nav>
+					<script>
+						$(function(){
+							$(".top-entry li .collect").mouseover(function(){
+								$(this).children("s").css({"backgroundPosition":"-225px -27px"})
+							})
+							$(".top-entry li .collect").mouseout(function(){
+								$(this).children("s").css({"backgroundPosition":"-225px 0px"})
+							})
+							$(".log-wechat .wechat1").mouseover(function(){
+								$(this).css({"background":"white"})
+								$(this).children("s").css({"backgroundPosition":"-225px -87px"});
+								$(this).children("b").css({"backgroundPosition":"-175px -128px",
+								"transform":"rotate(180deg )"});
+								$(this).children(".blank").css({"display":"block"})
+								$(".yt-wechat").css({"display":"block"})
+							})
+							$(".log-wechat .wechat1").mouseout(function(){
+								$(this).css({"background":""})
+								$(this).children("s").css({"backgroundPosition":"-225px -57px"});
+								$(this).children("b").css({"backgroundPosition":"-175px -111px",
+								"transform":"rotate(0)"});
+								$(this).children(".blank").css({"display":"none"});
+								$(".yt-wechat").css({"display":"none"})
+								
+							})
+//							手机银泰
+							$(".log-yt-phone .log-link").mouseover(function(){
+								$(this).css({"background":"white"})
+								$(this).children("s").css({"backgroundPosition":"center bottom"});
+								$(this).children("b").css({"backgroundPosition":"-175px -128px",
+								"transform":"rotate(180deg)"});
+								$(this).children(".blank").css({"display":"block"})
+								$(".yt-phone").css({"display":"block"})
+							})
+							$(".log-yt-phone .log-link").mouseout(function(){
+								$(this).css({"background":""})
+								$(this).children("s").css({"backgroundPosition":"center 0"});
+								$(this).children("b").css({"backgroundPosition":"-175px -111px",
+								"transform":"rotate(0)"});
+								$(this).children(".blank").css({"display":"none"});
+								$(".yt-phone").css({"display":"none"})
+								
+								
+								
+							})
+						})
+						
+					</script>
+					<ul class='top-logs'>
+						<li class='log-user'>
+							<span class="welcome">Hi，欢迎来到银泰网！</span>
+							<a href="login.html" class='login'>登录</a>
+							<a href="register.html" class='reg'>注册</a>
+						</li>
+						<li class="separator"></li>
+						<li><a href='#' style="height:26px;padding:8px 10px 0">我的订单</a></li>
+						<li class="separator"></li>
+						<li class='log-yt-home'>
+							<div>
+								<a href="#" class='log-link'>
+									我的银泰
+									<b></b>
+									<span class="blank"></span>
+								</a>
+								<div class='yt-myhome'>
+									<p><a href='#'>我的收藏</a></p>
+									<p><a href='#'>我的余额</a></p>
+									<p><a href='#'>我的银元</a></p>
+									<p><a href='#'>我的银泰卡</a></p>
+									<p><a href='#'>我的优惠券</a></p>
+									<p><a href='#'>我的积分</a></p>
+									
+								</div>
+								<script>
+									$(function(){
+										$(".log-yt-home .log-link").mouseover(function(){
+											$(".yt-myhome").css({"display":"block"});
+											$(this).css("background","white");
+											$(this).children("b").css({"backgroundPosition":"-175px -128px",
+								"transform":"rotate(180deg)"})
+											$(this).children(".blank").css("display","block")
+										})
+										$(".log-yt-home .log-link").mouseout(function(){
+											$(".yt-myhome").css({"display":"none"});
+											$(this).css("background","");
+											$(this).children("b").css({"backgroundPosition":"-175px -111px",
+								"transform":"rotate(0deg)"})
+											$(this).children(".blank").css("display","none")
+										})
+									})
+									
+								</script>
+							</div>
+						</li>
+						<li class="separator"></li>
+						<li><a href='#' style="height:26px;padding:8px 10px 0">银泰卡</a></li>
+						<li class="separator"></li>
+						<li><a href='#' style="height:26px;padding:8px 10px 0">帮助中心</a></li>
+					</ul>
+				</div>
+				</div>
+				<div class='top-banner'>
+					<a href='#'></a>
+				</div>
+				<div class='hdmain'>
+					<div class='top-main'>
+						<h1><a href='#'>银泰网</a></h1>
+						<div class="itype"></div>
+						<div id="J-MiniCart" class="icart">
+			                <a href="#" class='minishop'>
+			                    <span>购物袋<strong id="J-CartCount">0</strong>件</span>
+			                    <b></b>
+			                </a>
+		                	<div id="J-ShopCart">
+		                		<div class="yt-bags-nothing">购物袋中还没有商品，赶快选购吧！</div>
+		                	</div>
+		                	<script>
+		                		$(".icart").hover(function(){
+		                			$("#J-ShopCart").show();
+		                		},function(){
+		                			$("#J-ShopCart").hide()
+		                		})
+		                	</script>
+		            	</div>
+		            	<div class='isearch'>
+		            		<div class='searchbox'>
+		            			<input type="text" class="place-holder" placeholder="大家正在搜：母婴特卖专场 低至9元">
+		            			<button id="J_SearchBtn">搜索</button>
+		            			<input class="default-attr" type="hidden" >
+		            				
+		            		</div>
+		            		<div id="hotKeyWord">
+                            			<a href="#">益智玩具</a>
+							            <a href="#">儿童鞋</a>
+							            <a href="#">Tommy Hilfiger</a>
+							            <a href="#">美妆清仓</a>
+							            <a href="#">女士短袖</a>
+							            <a href="#">DSS jeep</a>
+							            <a href="#">狼爪户外</a>
+							            <a href="#">宝榭</a>
+
+                			</div>
+		            	</div>
+					</div>
+				</div>
+				<div id='hdmenu'>
+					<div class='top-menu'>
+						<div class='munu-cate'>
+							<a href="#">全部分类</a>
+						</div>
+						<div class='munu-list'>
+							<dl class='dl-01'>
+								<dt>
+									<a class='category' href='#'>
+										<em></em>名品
+									</a>
+									<i></i>
+									<a href='#' class='hot'>秋冬新品</a>
+									<span></span>
+								</dt>
+								
+								<dd style="display: none;">
+									<div class='submenu'>
+										<div class='sorts-list'>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">男装</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">新品</a>  
+													<a href="#" target="_blank" title="T恤">T恤</a>  
+													<a class="yt_hotword" href="#">POLO衫</a> 
+													<a href="#" title="衬衫">裤装</a>
+													<a href="#" title="衬衫">衬衫</a>  
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">女装</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">新品</a>  
+													<a href="#">T恤</a>  
+													<a class="yt_hotword" href="#">衬衫</a>  
+													<a href="#" target="_blank">裤装</a>
+													<a href="#" target="_blank">裙装</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">鞋靴</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">新品</a>  
+													<a href="#">女士单鞋</a>  
+													<a class="yt_hotword" href="#">男鞋</a> 
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">女包</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">新品</a>
+													<a class="yt_hotword" href="#">手提斜挎包</a>
+													<a href="#">单肩包</a>  
+													<a href="#">钱夹</a>
+													<a href="#">手拿包</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">男包</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">新品</a>
+													<a class="yt_hotword" href="#">钱包包</a>
+													<a href="#">单肩包</a>  
+													<a href="#">手拿包</a>
+													<a href="#">手提包</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">配饰</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">新品</a>
+													<a  href="#">围巾</a>
+													<a href="#">帽子</a>
+													<a class="yt_hotword" href="#">腰带</a>
+												</p>
+											</div>
+											<div class="sorts-repeat" style="border: none;">
+												<h3>
+													<a href="#">婴童</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">童装</a>
+													<a  href="#">童鞋</a>
+													<a href="#">婴童配饰</a>
+												</p>
+											</div>
+										</div>
+										<div class='sorts-brand'>
+											<h3>品牌</h3>
+											<p>
+												<a href="#"> BURBERRY</a>
+												<a href="#"> FERRAGAMO</a>
+												<a href="#"> GUCCI</a>
+												<a href="#"> COACH</a>
+												<a href="#"> ARMANI JEANS</a>
+												<a href="#"> DIESEL</a>
+												<a href="#"> VERSACE</a>
+												<a href="#"> MAX&amp;CO</a>
+												<a href="#"> FRED PERRY</a><a href=""> CELINE</a>
+												<a href="#"> SPORTMAX</a><a href=""> MAX MARA</a>
+												<a href="#"> MICHAEL KORS</a>
+												<a href="#"> ZEGNA </a>
+												<a href="#"> FENDI </a>
+												<a href="#"> EMPORIO ARMANI </a>
+												<a href="#"> BALLY </a>
+												<a href="#"> ALEXANDER MCQUEEN </a>
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl class='dl-02'>
+								<dt>
+									<a class='category' href='#'>
+										<em></em>女装
+									</a>
+									<i></i>
+									<a href='#' class='hot'>秋季上新</a>
+									<span></span>
+								</dt>
+								<dd style="top:46px;display: none;">
+									<div class='submenu'>
+										<div class='sorts-list'>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">热门搜索</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">商场同款</a>  
+													<a href="#" class="yt_hotword">春夏新品</a>  
+													<a href="#">连衣裙</a> 
+													<a href="#" class="yt_hotword" >风衣</a>
+													<a href="#" title="衬衫">裤装</a>
+													<a href="#" title="衬衫">衬衫</a>
+													<a href="#" title="衬衫">T恤</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">流行元素</a>
+													
+												</h3>
+												<p>  
+													<a href="#">欧美风</a>  
+													<a href="#">英伦风</a>  
+													<a href="#">韩范</a>  
+													<a href="#">简约风</a>
+													<a href="#">刺绣</a>
+													<a href="#">休闲风</a>
+													<a href="#">纯色</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">上装</a>
+													
+												</h3>
+												<p>  
+													<a href="#">卫衣/绒衣</a>  
+													<a href="#">针织衫</a>  
+													<a href="#">外套</a>
+													<a class="yt_hotword" href="#">风衣</a>
+													<a href="#">小西装</a>  
+													<a href="#">大衣</a>  
+													<a href="#">衬衫</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">下装</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">牛仔裤</a>
+													<a class="yt_hotword" href="#">休闲裤</a>
+													<a href="#">连体裤</a>  
+													<a href="#">哈伦裤</a>
+													<a href="#">西装裤</a>
+													<a href="#">长裤</a>  
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">裙装</a>
+													
+												</h3>
+												<p>  
+													<a href="#">半身裙</a>
+													<a class="yt_hotword" href="#">长袖裙</a>
+													<a href="#">牛仔裙</a>  
+													<a href="#" class="yt_hotword">连衣裙</a>
+												</p>
+											</div>
+											<div class="sorts-repeat" style="border: none;">
+												<h3>
+													<a href="#">女士内衣</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">文胸</a>
+													<a  href="#" class="yt_hotword">底裤</a>
+													<a href="#">家居服</a>
+													<a href="#">束身衣</a>
+													<a href="#">吊带/背心</a>
+													<a href="#">袜品</a>
+													<a href="#">泳衣</a>
+												</p>
+											</div>
+										</div>
+										<div class='sorts-brand'>
+											<h3>品牌</h3>
+											<p>
+												<a href="#"> BURBERRY</a>
+												<a href="#"> FERRAGAMO</a>
+												<a href="#"> GUCCI</a>
+												<a href="#"> COACH</a>
+												<a href="#"> ARMANI JEANS</a>
+												<a href="#"> DIESEL</a>
+												<a href="#"> VERSACE</a>
+												<a href="#"> MAX&amp;CO</a>
+												<a href="#"> FRED PERRY</a><a href=""> CELINE</a>
+												<a href="#"> SPORTMAX</a><a href=""> MAX MARA</a>
+												<a href="#"> MICHAEL KORS</a>
+												<a href="#"> ZEGNA </a>
+												<a href="#"> FENDI </a>
+												<a href="#"> EMPORIO ARMANI </a>
+												<a href="#"> BALLY </a>
+												<a href="#"> ALEXANDER MCQUEEN </a>
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl class='dl-03'>
+								<dt>
+									<a class='category' href='#'>
+										<em></em>男装
+									</a>
+									<i></i>
+									<a href='#' class='hot'>型男专场</a>
+									<span></span>
+								</dt>
+								<dd style="display: none;">
+									<div class='submenu'>
+										<div class='sorts-list'>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">热门搜索</a>
+													
+												</h3>
+												<p>  
+													<a href="#">大衣</a>  
+													<a href="#">T恤</a>  
+													<a class="yt_hotword" href="#">衬衫</a> 
+													<a href="#" title="衬衫">卫衣</a>
+													<a href="#" title="衬衫">外套</a>
+													<a href="#" title="衬衫">休闲裤</a>
+													<a href="#" title="衬衫">牛仔裤</a> 
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">上新</a>
+													
+												</h3>
+												<p>  
+													<a href="#">短袖衬衫</a>  
+													<a  class="yt_hotword" href="#">POLO衫</a>  
+													<a href="#">短袖T恤</a>  
+													<a href="#" target="_blank">短裤</a>
+													<a href="#" target="_blank">牛仔裤</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">上装</a>
+													
+												</h3>
+												<p>  
+													<a href="#">衬衫</a>  
+													<a href="#">T恤</a>  
+													<a href="#">卫衣</a> 
+													<a href="#">夹克</a>  
+													<a href="#">外套</a>  
+													<a href="#">针织衫</a> 
+													<a href="#">POLO衫</a>
+												</p>
+											</div>
+											<div class="sorts-repeat" style="border: none;">
+												<h3>
+													<a href="#">下装</a>
+													
+												</h3>
+												<p>  
+													<a href="#">牛仔裤</a>
+													<a href="#">休闲裤</a>
+													<a href="#">西裤</a>  
+													<a href="#">短裤</a>
+												</p>
+											</div>
+											
+										</div>
+										<div class='sorts-brand'>
+											<h3>品牌</h3>
+											<p>
+												<a href="#"> BURBERRY</a>
+												<a href="#"> FERRAGAMO</a>
+												<a href="#"> GUCCI</a>
+												<a href="#"> COACH</a>
+												<a href="#"> ARMANI JEANS</a>
+												<a href="#"> DIESEL</a>
+												<a href="#"> VERSACE</a>
+												<a href="#"> MAX&amp;CO</a>
+												<a href="#"> FRED PERRY</a><a href=""> CELINE</a>
+												<a href="#"> SPORTMAX</a><a href=""> MAX MARA</a>
+												<a href="#"> MICHAEL KORS</a>
+												<a href="#"> ZEGNA </a>
+												<a href="#"> FENDI </a>
+												<a href="#"> EMPORIO ARMANI </a>
+												<a href="#"> BALLY </a>
+												<a href="#"> ALEXANDER MCQUEEN </a>
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl class='dl-04'>
+								<dt>
+									<a class='category' href='#'>
+										<em></em>鞋靴
+									</a>
+									<i></i>
+									<a href='#' class='hot'>时尚鞋品</a>
+									<span></span>
+								</dt>
+								<dd style="display: none;">
+									<div class='submenu'>
+										<div class='sorts-list'>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">热门搜索</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">春季上新</a>  
+													<a href="#" class="yt_hotword">单鞋</a>  
+													<a class="yt_hotword" href="#">乐福鞋</a> 
+													<a href="#" title="衬衫">休闲鞋</a> 
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">女鞋</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">春季上新</a>  
+													<a class="yt_hotword" href="#">单鞋</a>  
+													<a href="#">平底鞋</a>  
+													<a href="#" class="yt_hotword">坡跟鞋</a>
+													<a href="#" target="_blank">乐福鞋</a>
+													<a href="#" target="_blank">豆豆鞋</a>
+												</p>
+											</div>
+											<div class="sorts-repeat" style="border: none;">
+												<h3>
+													<a href="#">男鞋</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">春季新品</a>  
+													<a class="yt_hotword" href="#">休闲鞋</a>  
+													<a href="#">正装鞋</a>
+													<a href="#">乐福鞋</a>  
+													<a href="#">帆布鞋</a>
+													<a href="#">豆豆鞋</a> 
+												</p>
+											</div>
+											
+										</div>
+										<div class='sorts-brand'>
+											<h3>品牌</h3>
+											<p>
+												<a href="#"> BURBERRY</a>
+												<a href="#"> FERRAGAMO</a>
+												<a href="#"> GUCCI</a>
+												<a href="#"> COACH</a>
+												<a href="#"> ARMANI JEANS</a>
+												<a href="#"> DIESEL</a>
+												<a href="#"> VERSACE</a>
+												<a href="#"> MAX&amp;CO</a>
+												<a href="#"> FRED PERRY</a><a href=""> CELINE</a>
+												<a href="#"> SPORTMAX</a><a href=""> MAX MARA</a>
+												<a href="#"> MICHAEL KORS</a>
+												<a href="#"> ZEGNA </a>
+												<a href="#"> FENDI </a>
+												<a href="#"> EMPORIO ARMANI </a>
+												<a href="#"> BALLY </a>
+												<a href="#"> ALEXANDER MCQUEEN </a>
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl class='dl-05'>
+								<dt>
+									<a class='category' href='#'>
+										<em></em>美妆
+									</a>
+									<i></i>
+									<a href='#' class='hot'>防晒隔离</a>
+									<span></span>
+								</dt>
+								<dd style="display:none;">
+									<div class='submenu'>
+										<div class='sorts-list'>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">面部保养</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">面膜</a>  
+													<a href="#" class="yt_hotword" title="T恤">护肤套装</a>  
+													<a href="#">洁面</a> 
+													<a class="yt_hotword" href="#" title="衬衫">爽肤水</a>
+													<a href="#" title="衬衫">乳液</a>
+													<a href="#" title="衬衫">精华</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">魅力彩妆</a>
+													
+												</h3>
+												<p>  
+													<a href="#">粉底液/粉底膏</a>  
+													<a class="yt_hotword" href="#">BB霜</a>  
+													<a class="yt_hotword" href="#">遮瑕</a>  
+													<a href="#" target="_blank">散粉/蜜粉</a>
+													<a href="#" target="_blank">卸妆</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">香氛洗护</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">女士香水</a>  
+													<a href="#">男士香水</a>  
+													<a href="#">其他香水</a> 
+													<a href="#">香氛精油</a>
+													<a class="yt_hotword" href="#">洗护套装</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">身体护理</a>
+													
+												</h3>
+												<p>  
+													<a href="#">身体套装</a>
+													<a href="#">沐浴露</a>
+													<a href="#">身体乳</a>  
+													<a href="#">身体清洁</a>
+													<a href="#">丰胸瘦身</a>
+												</p>
+											</div>
+											<div class="sorts-repeat" style="border: none;">
+												<h3>
+													<a href="#">男士护理</a>
+													
+												</h3>
+												<p>  
+													<a href="#">面部清洁</a>
+													<a href="#">爽肤水/须后水</a>
+													<a href="#">乳液/面霜</a>  
+													<a href="#">男士香水</a>
+												</p>
+											</div>
+											
+										</div>
+										<div class='sorts-brand'>
+											<h3>品牌</h3>
+											<p>
+												<a href="#"> BURBERRY</a>
+												<a href="#"> FERRAGAMO</a>
+												<a href="#"> GUCCI</a>
+												<a href="#"> COACH</a>
+												<a href="#"> ARMANI JEANS</a>
+												<a href="#"> DIESEL</a>
+												<a href="#"> VERSACE</a>
+												<a href="#"> MAX&amp;CO</a>
+												<a href="#"> FRED PERRY</a><a href=""> CELINE</a>
+												<a href="#"> SPORTMAX</a><a href=""> MAX MARA</a>
+												<a href="#"> MICHAEL KORS</a>
+												<a href="#"> ZEGNA </a>
+												<a href="#"> FENDI </a>
+												<a href="#"> EMPORIO ARMANI </a>
+												<a href="#"> BALLY </a>
+												<a href="#"> ALEXANDER MCQUEEN </a>
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl class='dl-06'>
+								<dt>
+									<a class='category' href='#'>
+										<em></em>箱包
+									</a>
+									<i></i>
+									<a href='#' class='hot'>女神单肩</a>
+									<span></span>
+								</dt>
+								<dd style="display:none;">
+									<div class='submenu'>
+										<div class='sorts-list'>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">热门搜索</a>
+													
+												</h3>
+												<p>  
+													<a href="#">女士印花</a>  
+													<a href="#" title="T恤">鳄鱼纹</a>  
+													<a href="#">男士斜纹包</a> 
+													<a href="#" title="衬衫">链条包</a>
+													<a href="#" title="衬衫">减龄女包</a>  
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">时尚女包</a>
+													
+												</h3>
+												<p>  
+													<a href="#">单肩包</a>  
+													<a href="#">手提包</a>  
+													<a class="yt_hotword" href="#">斜挎包</a>  
+													<a href="#" target="_blank">手拿包</a>
+													<a href="#">双肩包</a>
+													<a href="#" class="yt_hotword">帆布包</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">精品男包</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">双肩包</a>  
+													<a href="#">单肩包</a>  
+													<a class="yt_hotword" href="#">手提包</a>
+													<a href="#">斜挎包</a>
+													<a href="#">手拿包</a>
+													<a href="#" class="yt_hotword">商务包</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">功能包</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">女士钱包</a>
+													<a class="yt_hotword" href="#">男士钱包</a>
+													<a href="#">电脑包</a>  
+													<a href="#">登山包</a>
+													<a href="#">证件夹</a>
+												</p>
+											</div>
+											<div class="sorts-repeat" style="border: none;">
+												<h3>
+													<a href="#">旅行箱包</a>
+													
+												</h3>
+												<p>  
+													<a href="#">旅行包</a>
+													<a href="#">旅行箱</a>
+													<a href="#" class="yt_hotword">万能滚轮拉杆箱</a>
+												</p>
+											</div>
+											
+										</div>
+										<div class='sorts-brand'>
+											<h3>品牌</h3>
+											<p>
+												<a href="#"> BURBERRY</a>
+												<a href="#"> FERRAGAMO</a>
+												<a href="#"> GUCCI</a>
+												<a href="#"> COACH</a>
+												<a href="#"> ARMANI JEANS</a>
+												<a href="#"> DIESEL</a>
+												<a href="#"> VERSACE</a>
+												<a href="#"> MAX&amp;CO</a>
+												<a href="#"> FRED PERRY</a><a href=""> CELINE</a>
+												<a href="#"> SPORTMAX</a><a href=""> MAX MARA</a>
+												<a href="#"> MICHAEL KORS</a>
+												<a href="#"> ZEGNA </a>
+												<a href="#"> FENDI </a>
+												<a href="#"> EMPORIO ARMANI </a>
+												<a href="#"> BALLY </a>
+												<a href="#"> ALEXANDER MCQUEEN </a>
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl class='dl-07'>
+								<dt>
+									<a class='category' href='#'>
+										<em></em>运动
+									</a>
+									<i></i>
+									<a href='#' class='hot'>运动鞋服</a>
+									<span></span>
+								</dt>
+								<dd style="display:none;">
+									<div class='submenu'>
+										<div class='sorts-list'>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">运动鞋服</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">运动短T</a>  
+													<a href="#" class="yt_hotword" title="T恤">运动裤</a>  
+													<a href="#">卫衣/连帽衫</a> 
+													<a href="#" title="衬衫">夹克/外套</a>
+													<a href="#" title="衬衫">休闲裤</a>  
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">运动鞋</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">跑步鞋</a>  
+													<a href="#">复古鞋</a>  
+													<a class="yt_hotword" href="#">休闲鞋</a>  
+													<a href="#" target="_blank">帆布鞋</a>
+													<a href="#" class="yt_hotword">篮球鞋</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">健身运动服</a>
+													
+												</h3>
+												<p>  
+													<a href="#">瑜伽服</a>  
+													<a href="#">女士泳装</a>  
+													<a href="#">男士泳裤</a> 
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">户外鞋</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">徒步鞋</a>
+													<a  href="#">休闲鞋</a>
+													<a href="#">登山鞋</a>  
+													<a href="#" class="yt_hotword">越野跑鞋</a>
+													<a href="#">溯溪鞋</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">户外休闲装</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">运动裤</a>
+													<a href="#">冲锋衣</a>
+													<a href="#">户外短袖</a>  
+													<a class="yt_hotword" href="#">休闲裤</a>
+													<a href="#">外套/夹克</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">户外专业服</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">冲锋衣</a>
+													<a class="yt_hotword" href="#">抓绒衣</a>
+													<a href="#">冲锋裤</a>
+													<a href="#">速干裤</a>
+												</p>
+											</div>
+											<div class="sorts-repeat" style="border: none;">
+												<h3>
+													<a href="#">户外运动装备</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">运动背包</a>
+													<a  href="#">户外背包</a>
+													<a href="#">运动配件</a>
+													<a class="yt_hotword" href="#">户外装备</a>
+												</p>
+											</div>
+										</div>
+										<div class='sorts-brand'>
+											<h3>品牌</h3>
+											<p>
+												<a href="#"> BURBERRY</a>
+												<a href="#"> FERRAGAMO</a>
+												<a href="#"> GUCCI</a>
+												<a href="#"> COACH</a>
+												<a href="#"> ARMANI JEANS</a>
+												<a href="#"> DIESEL</a>
+												<a href="#"> VERSACE</a>
+												<a href="#"> MAX&amp;CO</a>
+												<a href="#"> FRED PERRY</a><a href=""> CELINE</a>
+												<a href="#"> SPORTMAX</a><a href=""> MAX MARA</a>
+												<a href="#"> MICHAEL KORS</a>
+												<a href="#"> ZEGNA </a>
+												<a href="#"> FENDI </a>
+												<a href="#"> EMPORIO ARMANI </a>
+												<a href="#"> BALLY </a>
+												<a href="#"> ALEXANDER MCQUEEN </a>
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl class='dl-08'>
+								<dt>
+									<a class='category' href='#'>
+										<em></em>配饰
+									</a>
+									<i></i>
+									<a href='#' class='hot'>黄金饰品</a>
+									<span></span>
+								</dt>
+								<dd style="display:none;">
+									<div class='submenu'>
+										<div class='sorts-list'>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">最新热卖</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">银饰</a>  
+													<a href="#" class="yt_hotword" title="T恤">戒指</a>  
+													<a class="yt_hotword" href="#">黄金吊坠</a> 
+													<a href="#" title="衬衫">潮流饰品</a>
+													<a href="#" title="衬衫">胸针</a> 
+													<a href="#" title="衬衫">晴雨伞</a> 
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">配饰</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">太阳镜</a>  
+													<a href="#">眼镜框</a>  
+													<a href="#">女丝巾</a>  
+													<a href="#" target="_blank">帽子</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">品质手表</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">瑞士表</a>  
+													<a href="#">机械表</a>  
+													<a href="#">防水表</a>
+													<a href="#">石英表</a>  
+													<a href="#">电子表</a>
+													<a href="#">女士手表</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">珠宝</a>
+													
+												</h3>
+												<p>  
+													<a href="#">珍珠吊坠</a>
+													<a class="yt_hotword" href="#">黄金</a>
+													<a href="#">财宝</a>  
+													<a href="#">铂金</a>
+													<a href="#">K金</a>
+													<a class="yt_hotword" href="#">琥珀蜜蜡</a>
+												</p>
+											</div>
+											<div class="sorts-repeat" style="border: none;">
+												<h3>
+													<a href="#">精选饰品</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">手镯/手链</a>
+													<a href="#">耳环</a>
+													<a class="yt_hotword" href="#">发饰</a>  
+													<a href="#">项链</a>
+													<a class="yt_hotword" href="#">银饰</a>
+													<a href="#">血珀</a>
+													<a href="#">碧玺手链</a>
+												</p>
+											</div>
+											
+										</div>
+										<div class='sorts-brand'>
+											<h3>品牌</h3>
+											<p>
+												<a href="#"> BURBERRY</a>
+												<a href="#"> FERRAGAMO</a>
+												<a href="#"> GUCCI</a>
+												<a href="#"> COACH</a>
+												<a href="#"> ARMANI JEANS</a>
+												<a href="#"> DIESEL</a>
+												<a href="#"> VERSACE</a>
+												<a href="#"> MAX&amp;CO</a>
+												<a href="#"> FRED PERRY</a><a href=""> CELINE</a>
+												<a href="#"> SPORTMAX</a><a href=""> MAX MARA</a>
+												<a href="#"> MICHAEL KORS</a>
+												<a href="#"> ZEGNA </a>
+												<a href="#"> FENDI </a>
+												<a href="#"> EMPORIO ARMANI </a>
+												<a href="#"> BALLY </a>
+												<a href="#"> ALEXANDER MCQUEEN </a>
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl class='dl-09'>
+								<dt>
+									<a class='category' href='#'>
+										<em></em>婴童
+									</a>
+									<i></i>
+									<a href='#' class='hot'>母婴</a>
+									<span></span>
+								</dt>
+								<dd style="display:none;">
+									<div class='submenu'>
+										<div class='sorts-list'>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">婴幼儿</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">爬爬服</a>  
+													<a href="#" title="T恤">上衣</a>  
+													<a href="#">裤子</a> 
+													<a  class="yt_hotword" href="#" title="衬衫">新生儿礼盒</a>
+													 
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">女童装</a>
+													
+												</h3>
+												<p>  
+													<a href="#">T恤</a>  
+													<a class="yt_hotword" href="#">连衣裙/半裙</a>  
+													<a href="#">休闲服</a>  
+													<a href="#" target="_blank">打底裤</a>
+													<a href="#" target="_blank">衬衫</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">男童装</a>
+													
+												</h3>
+												<p>  
+													<a href="#">T恤</a>  
+													<a href="#">衬衫</a>  
+													<a href="#">休闲裤</a>
+													<a href="#">套装</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">童鞋</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">男运动鞋</a>
+													<a href="#">女运动鞋</a>
+													<a href="#">婴儿鞋</a>  
+													<a href="#">布鞋</a>
+													<a href="#">皮鞋</a>
+													<a href="#">凉鞋</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">孕产妇</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">防辐射服</a>
+													<a href="#">孕妇裙</a>
+													<a href="#" class="yt_hotword">孕妇裤</a>  
+													<a href="#">孕妇内衣</a>
+													<a href="#">孕产用品</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">宝宝用品</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">尿布/湿巾</a>
+													<a class="yt_hotword" href="#">安全座椅</a>
+													<a href="#">洗浴护肤</a>
+													<a href="#">喂养用品</a>
+												</p>
+											</div>
+											<div class="sorts-repeat" style="border: none;">
+												<h3>
+													<a href="#">儿童游乐</a>
+													
+												</h3>
+												<p>  
+													<a href="#">早教益智</a>
+													<a href="#">感官培养</a>
+													<a href="#">运动用品</a>
+												</p>
+											</div>
+										</div>
+										<div class='sorts-brand'>
+											<h3>品牌</h3>
+											<p>
+												<a href="#"> BURBERRY</a>
+												<a href="#"> FERRAGAMO</a>
+												<a href="#"> GUCCI</a>
+												<a href="#"> COACH</a>
+												<a href="#"> ARMANI JEANS</a>
+												<a href="#"> DIESEL</a>
+												<a href="#"> VERSACE</a>
+												<a href="#"> MAX&amp;CO</a>
+												<a href="#"> FRED PERRY</a><a href=""> CELINE</a>
+												<a href="#"> SPORTMAX</a><a href=""> MAX MARA</a>
+												<a href="#"> MICHAEL KORS</a>
+												<a href="#"> ZEGNA </a>
+												<a href="#"> FENDI </a>
+												<a href="#"> EMPORIO ARMANI </a>
+												<a href="#"> BALLY </a>
+												<a href="#"> ALEXANDER MCQUEEN </a>
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl class='dl-10'>
+								<dt>
+									<a class='category' href='#'>
+										<em></em>内衣
+									</a>
+									<i></i>
+									<a href='#' class='hot'>舒适内衣</a>
+									<span></span>
+								</dt>
+								<dd style="display: none;top:76px">
+									<div class='submenu'>
+										<div class='sorts-list'>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">塑身文胸</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">聚拢文胸</a>  
+													<a href="#" >无痕文胸</a>  
+													<a class="yt_hotword" href="#">无钢圈文胸</a> 
+													<a href="#" title="衬衫">少女文胸</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">睡衣/家居服</a>
+													
+												</h3>
+												<p>  
+													<a class="yt_hotword" href="#">秋款家居服</a>  
+													<a href="#">女士家居服</a>  
+													<a href="#">男士家居服</a>  
+													<a href="#" class="yt_hotword">睡裙</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">睡裙</a>
+													
+												</h3>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">底裤</a>
+													
+												</h3>
+												<p>  
+													<a href="#">女士底裤</a>  
+													<a href="#">男士底裤</a>
+												</p>
+											</div>
+											<div class="sorts-repeat">
+												<h3>
+													<a href="#">背心/吊带/T恤</a>
+													
+												</h3>
+												<p>  
+													<a href="#">女士吊带/背心</a>
+													<a href="#">男士背心/T恤</a>
+												</p>
+											</div>
+											<div class="sorts-repeat" style="border: none;">
+												<h3>
+													<a href="#">袜品</a>
+													
+												</h3>
+												<p>  
+													<a href="#">丝袜</a>
+													<a  href="#">短袜</a>
+													<a href="#">船袜</a>
+												</p>
+											</div>
+										</div>
+										<div class='sorts-brand'>
+											<h3>品牌</h3>
+											<p>
+												<a href="#"> BURBERRY</a>
+												<a href="#"> FERRAGAMO</a>
+												<a href="#"> GUCCI</a>
+												<a href="#"> COACH</a>
+												<a href="#"> ARMANI JEANS</a>
+												<a href="#"> DIESEL</a>
+												<a href="#"> VERSACE</a>
+												<a href="#"> MAX&amp;CO</a>
+												<a href="#"> FRED PERRY</a><a href=""> CELINE</a>
+												<a href="#"> SPORTMAX</a><a href=""> MAX MARA</a>
+												<a href="#"> MICHAEL KORS</a>
+												<a href="#"> ZEGNA </a>
+												<a href="#"> FENDI </a>
+												<a href="#"> EMPORIO ARMANI </a>
+												<a href="#"> BALLY </a>
+												<a href="#"> ALEXANDER MCQUEEN </a>
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+						</div>
+						
+						<script>
+							var timer = null;
+								$(".munu-list dl").mouseover(function(){
+									$(this).children("dd").css("display","block")
+								})
+								$(".munu-list dl").mouseout(function(){
+									$(this).children("dd").css("display","none")
+									
+								})
+						</script>
+						<ul class='nav-hr'>
+							<li id='hori01'><a href='#'><span>名品馆</span></a></li>
+							<li id='hori02'><a href='#'><span>特卖</span></a></li>
+							<li id='hori03'><a href='#'><span>海淘馆</span></a></li>
+							<li id='hori04'><a href='activitv.html'><span>会员专享</span></a><img src="image/nav-member-bg.gif" /> </li>
+						</ul>
+						<div class='nav-rr'>
+							<a href='#'>积分商城</a>
+							|
+							<a href='#'>全部品牌</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--第一部分结束-->
+			
+			<div id='bd'>
+				<!--Banner图开始-->
+				<div id="top-shadow"></div>
+				<a id='btn-L' style="display: none;"></a>
+				<a id='btn-R' style="display: none;"></a>
+				<ul id='banner'>
+					<li id='list01' style="background:url(image/b1.jpg);"><img src="image/banner-01.jpg" /> </li>
+					<li id='list02' style="background:url(image/b2.jpg);"><img src='image/banner-02.jpg'/></li>
+				</ul>
+				<nav id='nav_point'>
+					<li class='active'></li>
+					<li></li>
+				</nav>
+				<div id='adver'></div>
+				<script>
+					$(function(){
+						var index = 0;
+						//timer = setInterval(autoPlay,2000);
+						function autoPlay(){
+							index++;
+							if(index == $("#banner li").size()){
+								console.log($("#banner li").size())
+								index=0;
+							}
+							$("#nav_point li").eq(index).addClass("active").siblings().removeClass("active");
+							$("#banner li").eq(index).fadeIn(2000).siblings().fadeOut(2000);
+							
+						}
+						$("#bd").mouseover(function(){
+							$("#btn-L").show();
+							$("#btn-R").show();
+							clearInterval(timer);
+						})
+						$("#btn-R").click(function(){
+							clearInterval(timer);
+							autoPlay()
+						})
+						$("#btn-L").click(function(){
+							
+							if(index == 0){
+								index=$("#banner li").length;
+							}else{
+								index--;
+							}
+							
+							$("#nav_point li").eq(index).addClass("active").siblings().removeClass("active");
+							$("#banner li").eq(index).fadeIn(2000).siblings().fadeOut(2000);
+						})
+						$("#bd").mouseout(function(){
+							$("#btn-L").hide();
+							$("#btn-R").hide();
+							timer = setInterval(autoPlay,2000);
+						})
+						$("#nav_point>li").mouseover(function(){
+							clearInterval(timer);
+							index = $(this).index()-1;
+							
+							autoPlay();
+							
+						})
+						$("#nav_point>li").mouseout(function(){
+							timer = setInterval(autoPlay,2000);
+						})
+						$("#adver").mouseover(function(){
+							$(this).css({"right":86})
+						})
+						$("#adver").mouseout(function(){
+							$(this).css({"right":82})
+						})
+					})
+				</script>
+				
+			</div>
+			<!--Banner图结束-->
+			<div class='yt-wrap'>
+				<div class='brand-content'>
+					<ul class='ul1'style="width: 910px;">
+						<li><a href="#">超值特卖</a><span style="position: absolute;"></span></li>
+						<li><a href="#">手机专享</a><span style="position: absolute;"></span></li>
+						<li style="border-bottom-color: #e5004f;"><a href="#">品牌活动</a><span class='av' id='av'></span></li>
+					</ul>
+					<script>
+						
+						$(function(){
+							$(".ul1 li").mouseover(function(){
+								$(this).css("border-bottom-color","#e5004f").siblings().css("border-bottom-color","#333")
+								$(this).find("span").addClass("av").siblings().removeClass("av")
+								$(".pr_list_t").eq($(this).index()).show().siblings().hide();
+							})
+							$(".ul1 li").mouseout(function(){
+								$(this).css("border-bottom-color","#333");
+								$(this).find("span").removeClass("av");
+								$("#av").removeClass("av")
+							})
+						})
+					</script>
+					<div class='clear'></div>
+					<section>
+						<div class='pr_list_t' style='display: block;'>
+							<div class='border-animation'>
+								<div class="border-top"></div>
+								<div class="border-right"></div>
+								<div class="border-bottom"></div>
+								<div class="border-left"></div>
+								<div>
+									<a href="#"><img src='image/ead9f46e-e0c5-4817-a74d-2652b17bab32.jpg'/></a>
+								</div>
+							</div>
+							<div class='border-animation'>
+								<div class="border-top"></div>
+								<div class="border-right"></div>
+								<div class="border-bottom"></div>
+								<div class="border-left"></div>
+								<div>
+									<a href="#"><img src="image/ea655448-057d-4065-af00-bc535be18e2e.jpg"/></a>
+								</div>
+							</div>
+							<div class='border-animation'>
+								<div class="border-top"></div>
+								<div class="border-right"></div>
+								<div class="border-bottom"></div>
+								<div class="border-left"></div>
+								<div>
+									<a href="#"><img src="image/3fe5a6e7-0a10-4344-af0a-8dc97fa82359.jpg"/></a>
+								</div>
+							</div>
+							<div class='border-animation'>
+								<div class="border-top"></div>
+								<div class="border-right"></div>
+								<div class="border-bottom"></div>
+								<div class="border-left"></div>
+								<div>
+									<a href="#"><img src="image/d152fc7d-286c-4c14-a6b8-3106d65f00e7.jpg"/></a>
+								</div>
+							</div>
+							
+						</div>
+						<div class='pr_list_t' style='display: none;'>
+							<ul>
+								<li>
+									<div class='border-animation'>
+										<div class='border-top'></div>
+										<div class='border-right'></div>
+										<div class='border-bottom'></div>
+										<div class='border-left'></div>
+										<div>
+											<div class='yt-pr-img'>
+												<a href='#'><img src="image/yintai_cf1467b3-1f60-45f0-a7d7-29af9f232206.jpg" /> </a>
+											
+											</div>
+											<p class='p-01'>
+												<a href='#'>bear/小熊抽湿机CSJ-A02G1 智能极速除湿</a>
+											</p>
+											<p class="p-02"><strong>银泰价：￥799</strong><span>参考价：￥1499</span></p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class='border-animation'>
+										<div class='border-top'></div>
+										<div class='border-right'></div>
+										<div class='border-bottom'></div>
+										<div class='border-left'></div>
+										<div>
+											<div class='yt-pr-img'>
+												<a href='#'><img src="image/37000.jpg"/></a>
+											
+											</div>
+											<p class='p-01'>
+												<a href='#'>bear/小熊抽湿机CSJ-A02G1 智能极速除湿</a>
+											</p>
+											<p class="p-02"><strong>银泰价：￥3100</strong><span>参考价：￥4499</span></p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class='border-animation'>
+										<div class='border-top'></div>
+										<div class='border-right'></div>
+										<div class='border-bottom'></div>
+										<div class='border-left'></div>
+										<div>
+											<div class='yt-pr-img'>
+												<a href='#'><img src="image/3173.jpg" /> </a>
+											
+											</div>
+											<p class='p-01'>
+												<a href='#'>bear/小熊抽湿机CSJ-A02G1 智能极速除湿</a>
+											</p>
+											<p class="p-02"><strong>银泰价：￥499</strong><span>参考价：￥699</span></p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class='border-animation'>
+										<div class='border-top'></div>
+										<div class='border-right'></div>
+										<div class='border-bottom'></div>
+										<div class='border-left'></div>
+										<div>
+											<div class='yt-pr-img'>
+												<a href='#'><img src="image/yintai_b3651d14-daf3-4725-b53e-d65c4254be0b.jpg" /> </a>
+											
+											</div>
+											<p class='p-01'>
+												<a href='#'>bear/小熊抽湿机CSJ-A02G1 智能极速除湿</a>
+											</p>
+											<p class="p-02"><strong>银泰价：￥439</strong><span>参考价：￥1317</span></p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class='pr_list_t' style="display: none;">
+							<a href='#' class='pro_dpjp'><img src="image/f75bdc02-4266-4c2b-945d-748f54b159a1.jpg" /> </a>
+							<a href='#' class='pro_dpjp'><img src="image/60936854-3115-4d23-bd4f-1a5f504e7542.jpg" /> </a>
+							<a href='#' class='pro_dpjp'><img src="image/81e7efda-458d-4858-8b83-9cf7a90167b0.jpg" /> </a>
+							<a href='#' class='pro_dpjp'><img src="image/ee727f9d-c45f-42bd-9bcf-844dc77b9cb8.jpg" /> </a>
+						</div>
+						
+						<script>
+							$(function(){
+									$(".border-animation").mouseover(function(){
+									$(this).children(".border-top").css("width",220);
+									$(this).children(".border-right").css("height",260);
+									$(this).children(".border-bottom").css("width",220);
+									$(this).children(".border-left").css("height",260);
+								})
+								$(".border-animation").mouseout(function(){
+									$(this).children(".border-top").css("width",0);
+									$(this).children(".border-right").css("height",0);
+									$(this).children(".border-bottom").css("width",0);
+									$(this).children(".border-left").css("height",0);
+								})
+								$(".pro_dpjp img").pictureLight(0.8);
+							})
+							
+						</script>
+					</section>
+				</div>
+				<section class='yt-notice'><img src="image/c065c311-eadb-4262-bc76-7f204aaa0faa.jpg" /> </section>
+				<script>
+					$(function(){
+						$(".yt-notice img").pictureLight(0.8);
+					})
+						
+				</script>
+			</div>
+			<div class="float_nav">
+                <a id="mp" class="Y_floor_mp" href="javascript:;" target="_self">时尚名品</a>
+                <a id="wz" class="Y_floor_wz" href="javascript:;" target="_self">潮流女装</a>
+                <a id="nz" class="Y_floor_nz" href="javascript:;" target="_self">精品男装</a>
+                <a id="xx" class="Y_floor_xx" href="javascript:;" target="_self">时尚鞋靴</a>
+                <a id="xb" class="Y_floor_xb" href="javascript:;" target="_self">潮流箱包</a>
+                <a id="hf" class="Y_floor_hf" href="javascript:;" target="_self">美容护肤</a>
+                <a id="hw" class="Y_floor_yd" href="javascript:;" target="_self">运动户外</a>
+                <a id="ps" class="Y_floor_ps" href="javascript:;" target="_self">内衣配饰</a>
+                <a id="ty" class="Y_floor_ty" href="javascript:;" target="_self">可爱婴童</a>
+                <a id="top" class="Y_floor_top" href="javascript:;" target="_self">返回顶部</a>
+			</div>
+			<script>
+				$(function(){
+					var height = window.innerHeight;
+						$(window).scroll(function(){
+						var sTop = $(document).scrollTop();
+						if(sTop>=$(".yt-wrap").offset().top){
+							$(".float_nav").show()
+						}else{
+							$(".float_nav").hide()
+						}
+					})
+					var flag = true;
+					$(".float_nav>a:not(:last)").click(function(){
+					flag = false;
+						//操作楼层号的样式
+						$(this).addClass("active")
+							   .siblings()
+							   .removeClass("active");
+							   
+						//根据当前点击的楼层号   确定该楼层的top值
+						var top = $(".louti").eq( $(this).index() ).offset().top;
+						console.log(top)
+						//页面滚走的距离
+						$("body,html").animate({"scrollTop":top},1000,function(){
+							flag = true;
+						});
+					})
+					//点击 top  楼层号  回到顶部
+					$(".Y_floor_top").click(function(){
+						flag = false;
+						$('html,body').animate({
+							"scrollTop": 0
+						},1000,function(){
+							flag=true;
+						})
+						
+						$(".float_nav>a:not(:last)").removeClass("active");
+					})
+					//滚动条事件
+					$(window).scroll(function(){
+						//console.log( $(document).scrollTop() )
+						if(flag){ //当flag值为true时 可以执行滚动条的动作
+							
+							//页面滚走的距离
+							var sTop = $(document).scrollTop();
+							
+							var $floor = $(".louti").filter(function(){
+								console.log( sTop);
+								return Math.abs( $(this).offset().top - sTop ) < $(this).height()/2 ;
+								
+							})
+							
+							var index = $floor.index();
+							//console.log(index);
+						    if(index >= 0){
+						    	
+								$(".float_nav>a:not(:last)").eq(index)
+											.addClass("active")
+													.siblings()
+															.removeClass("active");
+						    }
+						}
+					})
+					
+				
+			})	
+			</script>
+			<div class='yt-floor'>
+				<div class="floor-title">
+					<h6></h6>
+				</div>
+				<div class='floor-cf'>
+					<div class='floor-ad'><img src="image/d749e86d-c414-4bab-ba7d-8ee0f8bc87dc.jpg" /> </div>
+					<div class='floor-content'>
+						<div class="tk-nav">
+							<nav>
+								<li class='active' ><a href='#'>热门品牌</a><span class='av' id='li1'></span></li>
+								<li><a href='#'>本周推荐</a><span></span></li>
+							</nav>
+						</div>
+						<div class='eva'>
+							<div class="pro-list-rm jay">
+								<a href="#" class='pro-01'><img src="image/2b40d7b3-4445-45cd-b003-17a20def0847.jpg" /> </a>
+								<a href="#" class='pro-02'><img src="image/b4798035-bdfa-4a61-b3c2-6bfb031ca3a1.jpg" /> </a>
+								<a href="#" class='pro-03'><img src="image/60767afb-7b44-4d6b-be2c-ddf5765fce99.jpg" /> </a>
+								<a href="#" class='pro-04'><img src="image/2f7d1d88-52a2-4219-a0b5-58708c1bb1e0.jpg" /> </a>
+								<a href="#" class='pro-05'><img src="image/277ae620-e1e1-4ed0-ae3e-e61a228fff95.jpg" /> </a>
+								<a href="#" class='pro-06'><img src="image/4ebfc686-04e8-4d9e-bc0c-40302c4ebd31.jpg" /> </a>
+								
+							</div>
+							<div class="pro-list-xp jay">
+								<ul>
+									
+								</ul>
+								<script>
+									var json =[
+										{"img":"image/pro01.jpg","name":"JDV杰帝梵 2017年 夏季新款男士 ","price":"￥169","jj":"￥499"},
+										{"img":"image/10084679937_1.jpg","name":"TIHOO添逅新款 蝴蝶结单鞋高跟鞋 ","price":"￥399","jj":"￥990"},
+										{"img":"image/10084679834_1.jpg","name":"TIHOO添逅新款单鞋 NIESUNDY ","price":"￥1169","jj":"￥1399"},
+										{"img":"image/yintai_4006cb3f-66d8-4382-b5f1-190ac4419ad2.jpg","name":"HOTFACE防震吊带文胸双层针织短 ","price":"￥328","jj":"￥469"},
+										{"img":"image/yintai_ecc58212-3bb7-4d18-97b2-9d63027d11d1.jpg","name":"耐克 W NIKE ROSHE ONE 女  ","price":"￥440","jj":"￥499"},
+										{"img":"image/yintai_0ffe7604-c76e-4ec5-8f9b-f8373321d920.jpg","name":"2017新品 曼妮芬旗下兰卓丽商场同","price":"￥319","jj":"￥339"},
+										{"img":"image/yintai_0de75628-42d7-4c98-a3dd-322ad9448cf3.jpg","name":"hcw（卉川屋）连衣裙 ","price":"￥334","jj":"￥379"}
+										
+									]
+									var html="";
+									console.log( typeof json)
+									for(var i =0;i<json.length;i++){
+										html+=`
+											<li class="border-animation">
+												<div class="border-top"></div>
+												<div class="border-right"></div>
+												<div class="border-bottom"></div>
+												<div class="border-left"></div>
+												<div class='pro-list-img'>
+													<a href="#"><img src="${json[i].img}" /> </a>
+												</div>
+												<div class='pro-list-content'>
+													<p class='pro-list-title'>
+														<a href="#">${json[i].name}</a>
+													</p>
+													<p class='j1'>
+														<span class="yintai-price">${json[i].price}</span>
+														<span class="shichang-price">参考价：${json[i].jj}</span>
+													</p>
+												</div>
+									</li>
+						
+										`
+										
+									}
+								$(".pro-list-xp ul").html(html);	
+								$(".tk-nav li").mouseover(function(){
+									$(this).find("span").addClass("av");
+									$(this).addClass("active");
+									$(".jay").eq($(this).index()).show().siblings().hide();
+								})
+								$(".tk-nav li").mouseout(function(){
+									$(this).find("span").removeClass("av");
+									$(this).siblings().removeClass("active");
+								})	
+								</script>
+							</div>
+						</div>
+						<script>
+							$(function(){
+								$(".floor-ad img").pictureLight(0.8);
+								$(".pro-list-rm a img").pictureLight(0.8);
+							})
+						</script>
+					</div>
+				</div>
+				
+				
+			</div>	
+
+			<div>
+
+			<div class='yt-map louti'>
+				<div class='map-title'>
+					<h6></h6>
+				</div>
+				<div class='map-nav'>
+					<nav>
+						<li><a href="">针织衫</a></li>
+						<li><a href="">外套</a></li>
+						<li><a href="">裙装</a></li>
+						<li><a href="">围巾</a></li>
+						<li><a href="">腰带</a></li>
+						<li><a href="">女鞋</a></li>
+						<li><a href="">女包</a></li>
+						<li><a href="">男包</a></li>
+						<li><a href="">钱包</a></li>
+						<li><a href="">男鞋</a></li>
+						<li><a href="">双肩包</a></li>
+						<li><a href="">衬衫</a></li>
+					</nav>
+					<div class="mapslide">
+						<div class="scroller">
+							<div class="scroller-panes scroller-panes1">
+								<div>
+									<a href='#'><img src='image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg'/></a>
+									<a href='#'><img src="image/8d6f279e-e808-4058-8e2e-24f73fa16d50.jpg" /> </a>
+									<a href='#'><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" /> </a>
+									<a href='#'><img src="image/8e9a6faf-f795-4ea4-978f-3965a2d66d71.jpg" /> </a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/79bf2b82-16fd-4e58-950f-199b0ea2fd4c.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" alt="" /></a>
+									<a href="#"><img src="image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+							</div>
+						</div>
+						<a class='map-prev prev1'></a>
+						<a class='map-next next1'></a>
+					</div>
+					<script>
+						var flag = true;
+						function autoPhto2(){
+							$(".scroller-panes1").animate({"left":-170},1200,function(){
+								$(".scroller-panes1").css("left",0)
+									   .find("div:first")
+									   .appendTo( $(".scroller-panes1") );
+									   flag = true;
+							})	
+						}
+						$(".next1").click(function(){
+							if(flag){
+								autoPhto2();
+							}
+							flag = false;
+						})
+						$(".prev1").click(function(){
+							if(flag){
+								$(".scroller-panes1>div:last").prependTo( $(".scroller-panes1") );
+								$(".scroller-panes1").css("left",-170);
+								$(".scroller-panes1").animate({"left":0},1200,function(){
+									flag = true;
+								})
+							}
+							flag = false;
+						})
+						
+					</script>
+				</div>
+				<section class='floor-slide qq'>
+					<div class="floor-banner-slide qq-01">
+						<div>
+							<a href='#'><img src="image/1fd848c4-0809-45ae-9917-f4de6d617fff.jpg" /> </a>
+							<a href="#"><img src="image/cb6554b6-ee68-4226-b648-e69d60cab659.jpg" /> </a>
+						</div>
+						<ul class='banner-slide-ul qq-02'>
+							<li class='active'></li>
+							<li></li>
+						</ul>
+						<a class='bt-L bt-L1'></a>
+						<a class='bt-R bt-R1'></a>
+					</div>
+				</section>
+				<section class='floor-banner'>
+					<div class="floor-banner-main">
+						
+					</div>
+				</section>
+				<script>
+					var arr2 = [
+						"image/95ec1a86-b4eb-4d86-9dee-380cc62ab1db.jpg",
+						"image/4f390380-4658-4c58-bdc4-dd61a8890617.jpg",
+						"image/5c60ebd3-d6e5-4840-99b4-6d72e700f64b.jpg",
+						"image/aa9bb271-f74b-4662-ba79-7aadd1bdebce.jpg"
+					
+					]
+					var str = ""
+					for(var i=0;i<arr2.length;i++){
+						str+=`
+							<div class="product-block">
+							<div class='border-animation'>
+								<div class="border-top"></div>
+								<div class="border-right"></div>
+								<div class="border-bottom"></div>
+								<div class="border-left"></div>
+								<div class="img-wrap"><img src="${arr2[i]}" /> </div>
+							</div>
+						</div>
+						`
+					}
+			$(function(){
+				
+				$(".product-block>.border-animation").mouseover(function(){
+							$(this).children(".border-top").css("width",272);
+							$(this).children(".border-right").css("height",182);
+							$(this).children(".border-bottom").css("width",272);
+							$(this).children(".border-left").css("height",182);
+						})
+						$(".product-block>.border-animation").mouseout(function(){
+							$(this).children(".border-top").css("width",0);
+							$(this).children(".border-right").css("height",0);
+							$(this).children(".border-bottom").css("width",0);
+							$(this).children(".border-left").css("height",0);
+						})
+						$(".floor-banner-slide>div>a>img").pictureLight(0.8);
+			})
+					
+							
+					$(".floor-banner-main").append(str)
+					var flag = true;
+					$(".floor-slide").mouseover(function(){
+						$(".bt-L,.bt-R").show();
+						$(".bt-L").stop().animate({"left":0},300);
+						$(".bt-R").stop().animate({"right":0},300);
+					})
+					$(".floor-slide").mouseout(function(){
+						$(".bt-L").stop().animate({"left":-30},300,function(){
+							$(".bt-L").hide();
+						});
+						$(".bt-R").stop().animate({"right":-30},300,function(){
+							$(".bt-R").hide();
+							
+						});
+					})
+					$(".bt-L").hover(function(){
+						$(".bt-L").css({"backgroundPositionY":"bottom"})
+					},function(){
+						$(".bt-L").css({"backgroundPositionY":"0"})
+					})
+					$(".bt-R").hover(function(){
+						$(".bt-R").css({"backgroundPositionY":"bottom"})
+					},function(){
+						$(".bt-R").css({"backgroundPositionY":"0"})
+					})
+					function autoPlay(){
+						$(".qq-01>div").animate({"marginLeft":-390},1500,function(){
+							$(".qq-01>div").css("margin-left",0)
+								   .find("a:first")
+								   .appendTo( $(".qq-01>div") );
+							flag = true;
+						})
+					}
+					$(".bt-R1").click(function(){
+						if( flag ){
+							autoPlay();
+							//console.log($(".floor-banner-slide div").find("a").index())
+						}
+						
+						flag = false;
+						$(".qq-02>li").eq(1).addClass("active").siblings().removeClass("active");
+					})
+					$(".bt-L1").click(function(){
+						if(flag){
+							//找到最后一个li放到最前面
+							$(".qq-01 div a:last").prependTo( $(".qq-01 div") );
+							$(".qq-01 div").css("margin-left","-390px");
+							$(".qq-01 div").animate({"margin-left":0},1500,function(){
+								flag = true;
+							})
+						}
+						flag = false;
+						$(".qq-02>li").eq(0).addClass("active").siblings().removeClass("active");
+						
+					})
+				</script>
+			</div>
+			<div class='yt-map louti'>
+				<div class='map-title'>
+					<h5></h5>
+				</div>
+				<div class='map-nav'>
+					<nav>
+						<li><a href="">连衣裙</a></li>
+						<li><a href="">卫衣</a></li>
+						<li><a href="">针织衫</a></li>
+						<li><a href="">衬衫</a></li>
+						<li><a href="">T恤</a></li>
+						<li><a href="">风衣</a></li>
+						<li><a href="">休闲裤</a></li>
+						<li><a href="">半身裙</a></li>
+						<li><a href="">牛仔裤</a></li>
+						<li><a href="">春季新品</a></li>
+						<li><a href="">短外套</a></li>
+					</nav>
+					<div class="mapslide">
+						<div class="scroller">
+							<div class="scroller-panes scroller-panes2">
+								<div>
+									<a href='#'><img src='image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg'/></a>
+									<a href='#'><img src="image/8d6f279e-e808-4058-8e2e-24f73fa16d50.jpg" /> </a>
+									<a href='#'><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" /> </a>
+									<a href='#'><img src="image/8e9a6faf-f795-4ea4-978f-3965a2d66d71.jpg" /> </a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/79bf2b82-16fd-4e58-950f-199b0ea2fd4c.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" alt="" /></a>
+									<a href="#"><img src="image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+							</div>
+						</div>
+						<a class='map-prev prev-01'></a>
+						<a class='map-next prev-02'></a>
+					</div>
+					<script>
+						var flag = true;
+						function autoPhto1(){
+							$(".scroller-panes2").animate({"left":-170},1200,function(){
+								$(".scroller-panes2").css("left",0)
+									   .find("div:first")
+									   .appendTo( $(".scroller-panes2") );
+									   flag = true;
+							})	
+						}
+						$(".prev-02").click(function(){
+							if(flag){
+								autoPhto1();
+							}
+							flag = false;
+						})
+						$(".prev-01").click(function(){
+							if(flag){
+								$(".scroller-panes2>div:last").prependTo( $(".scroller-panes2") );
+								$(".scroller-panes2").css("left",-170);
+								$(".scroller-panes2").animate({"left":0},1200,function(){
+									flag = true;
+								})
+							}
+							flag = false;
+						})
+						
+					</script>
+				</div>
+				<section class='floor-slide'>
+					<div class="floor-banner-slide">
+						<div>
+							<a href='#'><img src="image/eb99afb7-6dc1-4a96-b756-505649d03d28.jpg" /> </a>
+						</div>
+					</div>
+				</section>
+				<section class='floor-banner'>
+					<div class="floor-banner-main content1">
+						
+					</div>
+				</section>
+				<script>
+					var arr3 = [
+						"image/16654232-65e2-4909-a3c6-583818c4b87a.jpg",
+						"image/10852936-dde9-41aa-abd1-932f052de74a.jpg",
+						"image/6da86384-b373-4984-ab3c-6e50480f5545.jpg",
+						"image/0f1eb216-93dc-43b5-ae43-9ff8b41d73b5.jpg"
+					
+					]
+					var str1 = ""
+					for(var i=0;i<arr3.length;i++){
+						str1+=`
+							<div class="product-block">
+							<div class='border-animation'>
+								<div class="border-top"></div>
+								<div class="border-right"></div>
+								<div class="border-bottom"></div>
+								<div class="border-left"></div>
+								<div class="img-wrap"><img src="${arr3[i]}" /> </div>
+							</div>
+						</div>
+						`
+					}
+					$(".content1").append(str1)
+			$(function(){
+				
+				$(".content1>.border-animation").mouseover(function(){
+							$(this).children(".border-top").css("width",272);
+							$(this).children(".border-right").css("height",182);
+							$(this).children(".border-bottom").css("width",272);
+							$(this).children(".border-left").css("height",182);
+						})
+						$(".product-block>.border-animation").mouseout(function(){
+							$(this).children(".border-top").css("width",0);
+							$(this).children(".border-right").css("height",0);
+							$(this).children(".border-bottom").css("width",0);
+							$(this).children(".border-left").css("height",0);
+						})
+						$(".content1>div>a>img").pictureLight(0.8);
+			})
+					
+							
+					
+					
+				</script>
+			</div>
+			<div class='yt-map louti'>
+				<div class='map-title'>
+					<h4></h4>
+				</div>
+				<div class='map-nav'>
+					<nav>
+						<li><a href="">长袖衬衫</a></li>
+						<li><a href="">长袖T恤</a></li>
+						<li><a href="">羽绒服</a></li>
+						<li><a href="">卫衣</a></li>
+						<li><a href="">针织衫</a></li>
+						<li><a href="">牛仔</a></li>
+						<li><a href="">夹克/外套</a></li>
+						<li><a href="">牛仔裤</a></li>
+						<li><a href="">休闲裤</a></li>
+						<li><a href="">美国马球协会</a></li>
+						<li><a href="">viishow</a></li>
+						<li><a href="">俞兆林</a></li>
+					</nav>
+					<div class="mapslide">
+						<div class="scroller">
+							<div class="scroller-panes scroller-panes3">
+								<div>
+									<a href='#'><img src='image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg'/></a>
+									<a href='#'><img src="image/8d6f279e-e808-4058-8e2e-24f73fa16d50.jpg" /> </a>
+									<a href='#'><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" /> </a>
+									<a href='#'><img src="image/8e9a6faf-f795-4ea4-978f-3965a2d66d71.jpg" /> </a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/79bf2b82-16fd-4e58-950f-199b0ea2fd4c.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" alt="" /></a>
+									<a href="#"><img src="image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+							</div>
+						</div>
+						<a class='map-prev map-prev3'></a>
+						<a class='map-next map-next3'></a>
+					</div>
+					<script>
+						var flag = true;
+						function autoPhto3(){
+							$(".scroller-panes3").animate({"left":-170},1200,function(){
+								$(".scroller-panes3").css("left",0)
+									   .find("div:first")
+									   .appendTo( $(".scroller-panes3") );
+									   flag = true;
+							})	
+						}
+						$(".map-next3").click(function(){
+							if(flag){
+								autoPhto3();
+							}
+							flag = false;
+						})
+						$(".map-prev3").click(function(){
+							if(flag){
+								$(".scroller-panes3>div:last").prependTo( $(".scroller-panes3") );
+								$(".scroller-panes3").css("left",-170);
+								$(".scroller-panes3").animate({"left":0},1200,function(){
+									flag = true;
+								})
+							}
+							flag = false;
+						})
+						
+					</script>
+				</div>
+				<section class='floor-slide'>
+					<div class="floor-banner-slide">
+						<div>
+							<a href='#'><img src="image/8f03a605-f166-4f38-b814-879ec8d857b8.jpg" /> </a>
+						</div>
+					</div>
+				</section>
+				<section class='floor-banner'>
+					<div class="floor-banner-main content2">
+						
+					</div>
+				</section>
+				<script>
+						
+						
+				
+					var arr4 = [
+						"image/885f8f9e-1954-4b1e-ac4a-3dedd73a37ef.jpg",
+						"image/48649607-cd14-4cb3-b424-2944adbb4e75.jpg",
+						"image/7a4cbaef-4a2f-4d87-9951-5f679775ab9c.jpg",
+						"image/765539f8-5e6c-4cf6-b347-1c15b401ac60.jpg"
+					
+					]
+					var str2 = ""
+					for(var i=0;i<arr3.length;i++){
+						str2+=`
+							<div class="product-block">
+							<div class='border-animation'>
+								<div class="border-top"></div>
+								<div class="border-right"></div>
+								<div class="border-bottom"></div>
+								<div class="border-left"></div>
+								<div class="img-wrap"><img src="${arr4[i]}" /> </div>
+							</div>
+						</div>
+						`
+					}
+					$(".content2").append(str2)
+			$(function(){
+				
+				$(".content2>.border-animation").mouseover(function(){
+							$(this).children(".border-top").css("width",272);
+							$(this).children(".border-right").css("height",182);
+							$(this).children(".border-bottom").css("width",272);
+							$(this).children(".border-left").css("height",182);
+						})
+						$(".product-block>.border-animation").mouseout(function(){
+							$(this).children(".border-top").css("width",0);
+							$(this).children(".border-right").css("height",0);
+							$(this).children(".border-bottom").css("width",0);
+							$(this).children(".border-left").css("height",0);
+						})
+						$(".content2>div>a>img").pictureLight(0.8);
+			})
+					
+							
+					
+					
+				</script>
+			</div>
+			
+			<!--新起点-->
+			<div class='yt-map louti'>
+				<div class='map-title'>
+					<h6></h6>
+				</div>
+				<div class='map-nav'>
+					<nav>
+						<li><a href="">针织衫</a></li>
+						<li><a href="">外套</a></li>
+						<li><a href="">裙装</a></li>
+						<li><a href="">围巾</a></li>
+						<li><a href="">腰带</a></li>
+						<li><a href="">女鞋</a></li>
+						<li><a href="">女包</a></li>
+						<li><a href="">男包</a></li>
+						<li><a href="">钱包</a></li>
+						<li><a href="">男鞋</a></li>
+						<li><a href="">双肩包</a></li>
+						<li><a href="">衬衫</a></li>
+					</nav>
+					<div class="mapslide">
+						<div class="scroller">
+							<div class="scroller-panes scroller-panes4">
+								<div>
+									<a href='#'><img src='image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg'/></a>
+									<a href='#'><img src="image/8d6f279e-e808-4058-8e2e-24f73fa16d50.jpg" /> </a>
+									<a href='#'><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" /> </a>
+									<a href='#'><img src="image/8e9a6faf-f795-4ea4-978f-3965a2d66d71.jpg" /> </a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/79bf2b82-16fd-4e58-950f-199b0ea2fd4c.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" alt="" /></a>
+									<a href="#"><img src="image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+							</div>
+						</div>
+						<a class='map-prev prev4'></a>
+						<a class='map-next next4'></a>
+					</div>
+					<script>
+						var flag = true;
+						function autoPhto2(){
+							$(".scroller-panes4").animate({"left":-170},1200,function(){
+								$(".scroller-panes4").css("left",0)
+									   .find("div:first")
+									   .appendTo( $(".scroller-panes4") );
+									   flag = true;
+							})	
+						}
+						$(".next4").click(function(){
+							if(flag){
+								autoPhto2();
+							}
+							flag = false;
+						})
+						$(".prev4").click(function(){
+							if(flag){
+								$(".scroller-panes4>div:last").prependTo( $(".scroller-panes4") );
+								$(".scroller-panes4").css("left",-170);
+								$(".scroller-panes4").animate({"left":0},1200,function(){
+									flag = true;
+								})
+							}
+							flag = false;
+						})
+						
+					</script>
+				</div>
+				<section class='floor-slide qq1'>
+					<div class="floor-banner-slide qq-03">
+						<div>
+							<a href='#'><img src="image/6f5e94b8-3527-4bc6-b745-b7a22cf8d121.jpg" /> </a>
+							<a href="#"><img src="image/a09f4cb0-5322-49e0-8057-9b4b25981e36.jpg" /> </a>
+						</div>
+						<ul class='banner-slide-ul qq-04'>
+							<li class='active'></li>
+							<li></li>
+						</ul>
+						<a class='bt-L bt-L4'></a>
+						<a class='bt-R bt-R4'></a>
+					</div>
+				</section>
+				<section class='floor-banner'>
+					<div class="floor-banner-main">
+						
+					</div>
+				</section>
+				<script>
+					var arr02 = [
+						"image/95ec1a86-b4eb-4d86-9dee-380cc62ab1db.jpg",
+						"image/4f390380-4658-4c58-bdc4-dd61a8890617.jpg",
+						"image/5c60ebd3-d6e5-4840-99b4-6d72e700f64b.jpg",
+						"image/aa9bb271-f74b-4662-ba79-7aadd1bdebce.jpg"
+					
+					]
+					var str = ""
+					for(var i=0;i<arr02.length;i++){
+						str+=`
+							<div class="product-block">
+							<div class='border-animation'>
+								<div class="border-top"></div>
+								<div class="border-right"></div>
+								<div class="border-bottom"></div>
+								<div class="border-left"></div>
+								<div class="img-wrap"><img src="${arr02[i]}" /> </div>
+							</div>
+						</div>
+						`
+					}
+			$(function(){
+				
+				$(".product-block>.border-animation").mouseover(function(){
+							$(this).children(".border-top").css("width",272);
+							$(this).children(".border-right").css("height",182);
+							$(this).children(".border-bottom").css("width",272);
+							$(this).children(".border-left").css("height",182);
+						})
+						$(".product-block>.border-animation").mouseout(function(){
+							$(this).children(".border-top").css("width",0);
+							$(this).children(".border-right").css("height",0);
+							$(this).children(".border-bottom").css("width",0);
+							$(this).children(".border-left").css("height",0);
+						})
+						$(".floor-banner-slide>div>a>img").pictureLight(0.8);
+			})
+					
+							
+					$(".floor-banner-main").append(str)
+					var flag = true;
+					$(".floor-slide").mouseover(function(){
+						$(".bt-L4,.bt-R4").show();
+						$(".bt-L4").stop().animate({"left":0},300);
+						$(".bt-R4").stop().animate({"right":0},300);
+					})
+					$(".floor-slide").mouseout(function(){
+						$(".bt-L4").stop().animate({"left":-30},300,function(){
+							$(".bt-L4").hide();
+						});
+						$(".bt-R4").stop().animate({"right":-30},300,function(){
+							$(".bt-R4").hide();
+							
+						});
+					})
+					$(".bt-L").hover(function(){
+						$(".bt-L").css({"backgroundPositionY":"bottom"})
+					},function(){
+						$(".bt-L").css({"backgroundPositionY":"0"})
+					})
+					$(".bt-R").hover(function(){
+						$(".bt-R").css({"backgroundPositionY":"bottom"})
+					},function(){
+						$(".bt-R").css({"backgroundPositionY":"0"})
+					})
+					function autoPlay1(){
+						$(".qq-03>div").animate({"marginLeft":-390},1500,function(){
+							$(".qq-03>div").css("margin-left",0)
+								   .find("a:first")
+								   .appendTo( $(".qq-03>div") );
+							flag = true;
+						})
+					}
+					$(".bt-R4").click(function(){
+						if( flag ){
+							autoPlay1();
+							//console.log($(".floor-banner-slide div").find("a").index())
+						}
+						
+						flag = false;
+						$(".qq-04>li").eq(1).addClass("active").siblings().removeClass("active");
+					})
+					$(".bt-L4").click(function(){
+						if(flag){
+							//找到最后一个li放到最前面
+							$(".qq-03 div a:last").prependTo( $(".qq-03 div") );
+							$(".qq-03 div").css("margin-left","-390px");
+							$(".qq-03 div").animate({"margin-left":0},1500,function(){
+								flag = true;
+							})
+						}
+						flag = false;
+						$(".qq-04>li").eq(0).addClass("active").siblings().removeClass("active");
+						
+					})
+				</script>
+			</div>
+			<div class='yt-map louti'>
+				<div class='map-title'>
+					<h5 style="background-position-y: -184px;"></h5>
+				</div>
+				<div class='map-nav'>
+					<nav>
+						<li><a href="">连衣裙</a></li>
+						<li><a href="">卫衣</a></li>
+						<li><a href="">针织衫</a></li>
+						<li><a href="">衬衫</a></li>
+						<li><a href="">T恤</a></li>
+						<li><a href="">风衣</a></li>
+						<li><a href="">休闲裤</a></li>
+						<li><a href="">半身裙</a></li>
+						<li><a href="">牛仔裤</a></li>
+						<li><a href="">春季新品</a></li>
+						<li><a href="">短外套</a></li>
+					</nav>
+					<div class="mapslide">
+						<div class="scroller">
+							<div class="scroller-panes scroller-panes5">
+								<div>
+									<a href='#'><img src='image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg'/></a>
+									<a href='#'><img src="image/8d6f279e-e808-4058-8e2e-24f73fa16d50.jpg" /> </a>
+									<a href='#'><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" /> </a>
+									<a href='#'><img src="image/8e9a6faf-f795-4ea4-978f-3965a2d66d71.jpg" /> </a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/79bf2b82-16fd-4e58-950f-199b0ea2fd4c.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" alt="" /></a>
+									<a href="#"><img src="image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+							</div>
+						</div>
+						<a class='map-prev prev-05'></a>
+						<a class='map-next next-05'></a>
+					</div>
+					<script>
+						var flag = true;
+						function autoPhto5(){
+							$(".scroller-panes5").animate({"left":-170},1200,function(){
+								$(".scroller-panes5").css("left",0)
+									   .find("div:first")
+									   .appendTo( $(".scroller-panes5") );
+									   flag = true;
+							})	
+						}
+						$(".next-05").click(function(){
+							if(flag){
+								autoPhto5();
+							}
+							flag = false;
+						})
+						$(".prev-05").click(function(){
+							if(flag){
+								$(".scroller-panes5>div:last").prependTo( $(".scroller-panes5") );
+								$(".scroller-panes5").css("left",-170);
+								$(".scroller-panes5").animate({"left":0},1200,function(){
+									flag = true;
+								})
+							}
+							flag = false;
+						})
+						
+					</script>
+				</div>
+				<section class='floor-slide'>
+					<div class="floor-banner-slide">
+						<div>
+							<a href='#'><img src="image/2438ccd7-4093-4dbb-b7f6-4556f2b3a50c.jpg" /> </a>
+						</div>
+					</div>
+				</section>
+				<section class='floor-banner'>
+					<div class="floor-banner-main content5">
+						
+					</div>
+				</section>
+				<script>
+					var arr03 = [
+						"image/b2005787-11b6-41be-89e1-0c8749169d98.jpg",
+						"image/47b5d785-133b-43bb-b58a-68df9f0b6353.jpg",
+						"image/4c3223b1-5415-4d27-8178-7c6113f2745c.jpg",
+						"image/a0c6529e-ee6a-4385-8c42-ee66537bc854.jpg"
+					
+					]
+					var str1 = ""
+					for(var i=0;i<arr3.length;i++){
+						str1+=`
+							<div class="product-block">
+							<div class='border-animation'>
+								<div class="border-top"></div>
+								<div class="border-right"></div>
+								<div class="border-bottom"></div>
+								<div class="border-left"></div>
+								<div class="img-wrap"><img src="${arr03[i]}" /> </div>
+							</div>
+						</div>
+						`
+					}
+					$(".content5").append(str1)
+			$(function(){
+				
+				$(".content1>.border-animation").mouseover(function(){
+							$(this).children(".border-top").css("width",272);
+							$(this).children(".border-right").css("height",182);
+							$(this).children(".border-bottom").css("width",272);
+							$(this).children(".border-left").css("height",182);
+						})
+						$(".product-block>.border-animation").mouseout(function(){
+							$(this).children(".border-top").css("width",0);
+							$(this).children(".border-right").css("height",0);
+							$(this).children(".border-bottom").css("width",0);
+							$(this).children(".border-left").css("height",0);
+						})
+						$(".content1>div>a>img").pictureLight(0.8);
+			})
+					
+							
+					
+					
+				</script>
+			</div>
+			<div class='yt-map louti'>
+				<div class='map-title'>
+					<h4 style="background-position-y: -230px;"></h4>
+				</div>
+				<div class='map-nav'>
+					<nav>
+						<li><a href="">面膜</a></li>
+						<li><a href="">护肤套装</a></li>
+						<li><a href="">乳液</a></li>
+						<li><a href="">精华液</a></li>
+						<li><a href="">爽肤水</a></li>
+						<li><a href="">洁面</a></li>
+						<li><a href="">眼霜</a></li>
+						<li><a href="">身体护理</a></li>
+						<li><a href="">BB霜</a></li>
+						<li><a href="">男士护理</a></li>
+						<li><a href="">女士香水</a></li>
+						<li><a href="">唇膏口红</a></li>
+					</nav>
+					<div class="mapslide">
+						<div class="scroller">
+							<div class="scroller-panes scroller-panes6">
+								<div>
+									<a href='#'><img src='image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg'/></a>
+									<a href='#'><img src="image/8d6f279e-e808-4058-8e2e-24f73fa16d50.jpg" /> </a>
+									<a href='#'><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" /> </a>
+									<a href='#'><img src="image/8e9a6faf-f795-4ea4-978f-3965a2d66d71.jpg" /> </a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/79bf2b82-16fd-4e58-950f-199b0ea2fd4c.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" alt="" /></a>
+									<a href="#"><img src="image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+							</div>
+						</div>
+						<a class='map-prev map-prev6'></a>
+						<a class='map-next map-next6'></a>
+					</div>
+					<script>
+						var flag = true;
+						function autoPhto6(){
+							$(".scroller-panes6").animate({"left":-170},1200,function(){
+								$(".scroller-panes6").css("left",0)
+									   .find("div:first")
+									   .appendTo( $(".scroller-panes6") );
+									   flag = true;
+							})	
+						}
+						$(".map-next6").click(function(){
+							if(flag){
+								autoPhto6();
+							}
+							flag = false;
+						})
+						$(".map-prev6").click(function(){
+							if(flag){
+								$(".scroller-panes6>div:last").prependTo( $(".scroller-panes6") );
+								$(".scroller-panes6").css("left",-170);
+								$(".scroller-panes6").animate({"left":0},1200,function(){
+									flag = true;
+								})
+							}
+							flag = false;
+						})
+						
+					</script>
+				</div>
+				<section class='floor-slide'>
+					<div class="floor-banner-slide">
+						<div>
+							<a href='#'><img src="image/42ed4e98-3eab-4a6f-b2f1-073ae00c92b2.jpg" /> </a>
+						</div>
+					</div>
+				</section>
+				<section class='floor-banner'>
+					<div class="floor-banner-main content6">
+						
+					</div>
+				</section>
+				<script>
+						
+						
+				
+					var arr6 = [
+						"image/35a4fe58-f93f-4404-9db9-f62e5cc5ba29.jpg",
+						"image/bcd6c5a3-3e2b-403e-b951-dc8d15e56028.jpg",
+						"image/d4c19c68-bc18-4b85-829c-505e0fc044d9.jpg",
+						"image/cc39ebda-f367-4c6c-8711-39033fe3943d.jpg"
+					
+					]
+					var str2 = ""
+					for(var i=0;i<arr3.length;i++){
+						str2+=`
+							<div class="product-block">
+							<div class='border-animation'>
+								<div class="border-top"></div>
+								<div class="border-right"></div>
+								<div class="border-bottom"></div>
+								<div class="border-left"></div>
+								<div class="img-wrap"><img src="${arr6[i]}" /> </div>
+							</div>
+						</div>
+						`
+					}
+					$(".content6").append(str2)
+			$(function(){
+				
+				$(".content2>.border-animation").mouseover(function(){
+							$(this).children(".border-top").css("width",272);
+							$(this).children(".border-right").css("height",182);
+							$(this).children(".border-bottom").css("width",272);
+							$(this).children(".border-left").css("height",182);
+						})
+						$(".product-block>.border-animation").mouseout(function(){
+							$(this).children(".border-top").css("width",0);
+							$(this).children(".border-right").css("height",0);
+							$(this).children(".border-bottom").css("width",0);
+							$(this).children(".border-left").css("height",0);
+						})
+						$(".content2>div>a>img").pictureLight(0.8);
+			})
+					
+							
+					
+					
+				</script>
+			</div>
+			
+			
+			<div class='yt-map louti'>
+				<div class='map-title'>
+					<h6 style="background-position-y: -276px;"></h6>
+				</div>
+				<div class='map-nav'>
+					<nav>
+						<li><a href="">针织衫</a></li>
+						<li><a href="">外套</a></li>
+						<li><a href="">裙装</a></li>
+						<li><a href="">围巾</a></li>
+						<li><a href="">腰带</a></li>
+						<li><a href="">女鞋</a></li>
+						<li><a href="">女包</a></li>
+						<li><a href="">男包</a></li>
+						<li><a href="">钱包</a></li>
+						<li><a href="">男鞋</a></li>
+						<li><a href="">双肩包</a></li>
+						<li><a href="">衬衫</a></li>
+					</nav>
+					<div class="mapslide">
+						<div class="scroller">
+							<div class="scroller-panes scroller-panes7">
+								<div>
+									<a href='#'><img src='image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg'/></a>
+									<a href='#'><img src="image/8d6f279e-e808-4058-8e2e-24f73fa16d50.jpg" /> </a>
+									<a href='#'><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" /> </a>
+									<a href='#'><img src="image/8e9a6faf-f795-4ea4-978f-3965a2d66d71.jpg" /> </a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/79bf2b82-16fd-4e58-950f-199b0ea2fd4c.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" alt="" /></a>
+									<a href="#"><img src="image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+							</div>
+						</div>
+						<a class='map-prev prev7'></a>
+						<a class='map-next next7'></a>
+					</div>
+					<script>
+						var flag = true;
+						function autoPhto2(){
+							$(".scroller-panes7").animate({"left":-170},1200,function(){
+								$(".scroller-panes7").css("left",0)
+									   .find("div:first")
+									   .appendTo( $(".scroller-panes7") );
+									   flag = true;
+							})	
+						}
+						$(".next7").click(function(){
+							if(flag){
+								autoPhto2();
+							}
+							flag = false;
+						})
+						$(".prev7").click(function(){
+							if(flag){
+								$(".scroller-panes7>div:last").prependTo( $(".scroller-panes7") );
+								$(".scroller-panes7").css("left",-170);
+								$(".scroller-panes7").animate({"left":0},1200,function(){
+									flag = true;
+								})
+							}
+							flag = false;
+						})
+						
+					</script>
+				</div>
+				<section class='floor-slide qq2'>
+					<div class="floor-banner-slide qq-05">
+						<div>
+							<a href='#'><img src="image/2aec7718-8e64-47f2-9171-488402c0d25d.jpg" /> </a>
+							<a href="#"><img src="image/aa61fa5d-4d64-409a-942a-075fc664cf88.jpg" /> </a>
+						</div>
+						<ul class='banner-slide-ul qq-06'>
+							<li class='active'></li>
+							<li></li>
+						</ul>
+						<a class='bt-L bt-L7'></a>
+						<a class='bt-R bt-R7'></a>
+					</div>
+				</section>
+				<section class='floor-banner'>
+					<div class="floor-banner-main">
+						
+					</div>
+				</section>
+				<script>
+					var arr05 = [
+						"image/403cd24f-04bf-44bd-b42a-78821dfd4c2a.jpg",
+						"image/7efceb44-96d0-4746-8673-6b22614891dc.jpg",
+						"image/a7274760-9ecb-485f-a6b4-8747242838d9.jpg",
+						"image/b3ec6d23-f835-4116-a167-b49dd4cbbc3c.jpg"
+					
+					]
+					var str = ""
+					for(var i=0;i<arr05.length;i++){
+						str+=`
+							<div class="product-block">
+							<div class='border-animation'>
+								<div class="border-top"></div>
+								<div class="border-right"></div>
+								<div class="border-bottom"></div>
+								<div class="border-left"></div>
+								<div class="img-wrap"><img src="${arr05[i]}" /> </div>
+							</div>
+						</div>
+						`
+					}
+			$(function(){
+				
+				$(".product-block>.border-animation").mouseover(function(){
+							$(this).children(".border-top").css("width",272);
+							$(this).children(".border-right").css("height",182);
+							$(this).children(".border-bottom").css("width",272);
+							$(this).children(".border-left").css("height",182);
+						})
+						$(".product-block>.border-animation").mouseout(function(){
+							$(this).children(".border-top").css("width",0);
+							$(this).children(".border-right").css("height",0);
+							$(this).children(".border-bottom").css("width",0);
+							$(this).children(".border-left").css("height",0);
+						})
+						$(".floor-banner-slide>div>a>img").pictureLight(0.8);
+			})
+					
+							
+					$(".floor-banner-main").append(str)
+					var flag = true;
+					$(".floor-slide").mouseover(function(){
+						$(".bt-L7,.bt-R7").show();
+						$(".bt-L7").stop().animate({"left":0},300);
+						$(".bt-R7").stop().animate({"right":0},300);
+					})
+					$(".floor-slide").mouseout(function(){
+						$(".bt-L7").stop().animate({"left":-30},300,function(){
+							$(".bt-L7").hide();
+						});
+						$(".bt-R7").stop().animate({"right":-30},300,function(){
+							$(".bt-R7").hide();
+							
+						});
+					})
+					$(".bt-L").hover(function(){
+						$(".bt-L").css({"backgroundPositionY":"bottom"})
+					},function(){
+						$(".bt-L").css({"backgroundPositionY":"0"})
+					})
+					$(".bt-R").hover(function(){
+						$(".bt-R").css({"backgroundPositionY":"bottom"})
+					},function(){
+						$(".bt-R").css({"backgroundPositionY":"0"})
+					})
+					function autoPlay7(){
+						$(".qq-05>div").animate({"marginLeft":-390},1500,function(){
+							$(".qq-05>div").css("margin-left",0)
+								   .find("a:first")
+								   .appendTo( $(".qq-05>div") );
+							flag = true;
+						})
+					}
+					$(".bt-R7").click(function(){
+						if( flag ){
+							autoPlay7();
+							//console.log($(".floor-banner-slide div").find("a").index())
+						}
+						
+						flag = false;
+						$(".qq-06>li").eq(1).addClass("active").siblings().removeClass("active");
+					})
+					$(".bt-L7").click(function(){
+						if(flag){
+							//找到最后一个li放到最前面
+							$(".qq-05 div a:last").prependTo( $(".qq-05 div") );
+							$(".qq-05 div").css("margin-left","-390px");
+							$(".qq-05 div").animate({"margin-left":0},1500,function(){
+								flag = true;
+							})
+						}
+						flag = false;
+						$(".qq-06>li").eq(0).addClass("active").siblings().removeClass("active");
+						
+					})
+				</script>
+			</div>
+			<div class='yt-map louti'>
+				<div class='map-title'>
+					<h5 style="background-position-y: -322px;"></h5>
+				</div>
+				<div class='map-nav'>
+					<nav>
+						<li><a href="">连衣裙</a></li>
+						<li><a href="">卫衣</a></li>
+						<li><a href="">针织衫</a></li>
+						<li><a href="">衬衫</a></li>
+						<li><a href="">T恤</a></li>
+						<li><a href="">风衣</a></li>
+						<li><a href="">休闲裤</a></li>
+						<li><a href="">半身裙</a></li>
+						<li><a href="">牛仔裤</a></li>
+						<li><a href="">春季新品</a></li>
+						<li><a href="">短外套</a></li>
+					</nav>
+					<div class="mapslide">
+						<div class="scroller">
+							<div class="scroller-panes scroller-panes8">
+								<div>
+									<a href='#'><img src='image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg'/></a>
+									<a href='#'><img src="image/8d6f279e-e808-4058-8e2e-24f73fa16d50.jpg" /> </a>
+									<a href='#'><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" /> </a>
+									<a href='#'><img src="image/8e9a6faf-f795-4ea4-978f-3965a2d66d71.jpg" /> </a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/79bf2b82-16fd-4e58-950f-199b0ea2fd4c.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" alt="" /></a>
+									<a href="#"><img src="image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+							</div>
+						</div>
+						<a class='map-prev prev-08'></a>
+						<a class='map-next next-08'></a>
+					</div>
+					<script>
+						var flag = true;
+						function autoPhto8(){
+							$(".scroller-panes8").animate({"left":-170},1200,function(){
+								$(".scroller-panes8").css("left",0)
+									   .find("div:first")
+									   .appendTo( $(".scroller-panes8") );
+									   flag = true;
+							})	
+						}
+						$(".next-08").click(function(){
+							if(flag){
+								autoPhto8();
+							}
+							flag = false;
+						})
+						$(".prev-08").click(function(){
+							if(flag){
+								$(".scroller-panes8>div:last").prependTo( $(".scroller-panes8") );
+								$(".scroller-panes8").css("left",-170);
+								$(".scroller-panes8").animate({"left":0},1200,function(){
+									flag = true;
+								})
+							}
+							flag = false;
+						})
+						
+					</script>
+				</div>
+				<section class='floor-slide'>
+					<div class="floor-banner-slide">
+						<div>
+							<a href='#'><img src="image/7d77aa42-6a66-42a6-9934-3c7f10fbb52f.jpg" /> </a>
+						</div>
+					</div>
+				</section>
+				<section class='floor-banner'>
+					<div class="floor-banner-main content8">
+						
+					</div>
+				</section>
+				<script>
+					var arr8 = [
+						"image/dd048506-f2ff-42d5-98bb-4ca7261b3ee2.jpg",
+						"image/6021eacb-2085-4878-b279-70f54725acef.jpg",
+						"image/f1d826d2-fbeb-482a-beb8-bb830b5b136a.jpg",
+						"image/5c59f038-04e4-406d-be79-33640f67ed8b.jpg"
+					
+					]
+					var str1 = ""
+					for(var i=0;i<arr8.length;i++){
+						str1+=`
+							<div class="product-block">
+							<div class='border-animation'>
+								<div class="border-top"></div>
+								<div class="border-right"></div>
+								<div class="border-bottom"></div>
+								<div class="border-left"></div>
+								<div class="img-wrap"><img src="${arr8[i]}" /> </div>
+							</div>
+						</div>
+						`
+					}
+					$(".content8").append(str1)
+			$(function(){
+				
+				$(".content1>.border-animation").mouseover(function(){
+							$(this).children(".border-top").css("width",272);
+							$(this).children(".border-right").css("height",182);
+							$(this).children(".border-bottom").css("width",272);
+							$(this).children(".border-left").css("height",182);
+						})
+						$(".product-block>.border-animation").mouseout(function(){
+							$(this).children(".border-top").css("width",0);
+							$(this).children(".border-right").css("height",0);
+							$(this).children(".border-bottom").css("width",0);
+							$(this).children(".border-left").css("height",0);
+						})
+						$(".content1>div>a>img").pictureLight(0.8);
+			})
+					
+							
+					
+					
+				</script>
+			</div>
+			<div class='yt-map louti'>
+				<div class='map-title'>
+					<h4 style="background-position-y: -368px;"></h4>
+				</div>
+				<div class='map-nav'>
+					<nav>
+						<li><a href="">短袖T恤</a></li>
+						<li><a href="">连衣裙</a></li>
+						<li><a href="">爬爬服</a></li>
+						<li><a href="">防辐射服</a></li>
+						<li><a href="">打底裤</a></li>
+						<li><a href="">休闲裤</a></li>
+						<li><a href="">孕产妇</a></li>
+						<li><a href="">运动鞋</a></li>
+						<li><a href="">婴幼套装</a></li>
+						<li><a href="">四件套</a></li>
+						<li><a href="">床单/被罩</a></li>
+						<li><a href="">薄被</a></li>
+					</nav>
+					<div class="mapslide">
+						<div class="scroller">
+							<div class="scroller-panes scroller-panes9">
+								<div>
+									<a href='#'><img src='image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg'/></a>
+									<a href='#'><img src="image/8d6f279e-e808-4058-8e2e-24f73fa16d50.jpg" /> </a>
+									<a href='#'><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" /> </a>
+									<a href='#'><img src="image/8e9a6faf-f795-4ea4-978f-3965a2d66d71.jpg" /> </a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/79bf2b82-16fd-4e58-950f-199b0ea2fd4c.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/4ad6dd35-39aa-41cb-9c46-602d40302dcd.jpg" alt="" /></a>
+									<a href="#"><img src="image/5a5cf650-0d9a-45f1-a0af-d4aed985cdda.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+									<a href="#"><img src="image/97c2daf1-2fb1-4160-add4-251a92463a72.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/134413ad-c533-4e1f-af8d-f35dea235046.jpg" alt="" /></a>
+								</div>
+								<div>
+									<a href="#"><img src="image/0e00b125-0bd0-4d66-aedc-59d543afef8d.jpg" alt="" /></a>
+									<a href="#"><img src="image/63626328-f4d1-4027-be72-6b51a795670a.jpg" alt="" /></a>
+									<a href="#"><img src="image/9d5c7386-a84e-476d-8206-08add9c1c210.jpg" alt="" /></a>
+									<a href="#"><img src="image/4db2c421-fe94-423e-b16f-0f4cc7b2141a.jpg" alt="" /></a>
+								</div>
+							</div>
+						</div>
+						<a class='map-prev map-prev9'></a>
+						<a class='map-next map-next9'></a>
+					</div>
+					<script>
+						var flag = true;
+						function autoPhto9(){
+							$(".scroller-panes9").animate({"left":-170},1200,function(){
+								$(".scroller-panes9").css("left",0)
+									   .find("div:first")
+									   .appendTo( $(".scroller-panes9") );
+									   flag = true;
+							})	
+						}
+						$(".map-next9").click(function(){
+							if(flag){
+								autoPhto9();
+							}
+							flag = false;
+						})
+						$(".map-prev9").click(function(){
+							if(flag){
+								$(".scroller-panes9>div:last").prependTo( $(".scroller-panes9") );
+								$(".scroller-panes9").css("left",-170);
+								$(".scroller-panes9").animate({"left":0},1200,function(){
+									flag = true;
+								})
+							}
+							flag = false;
+						})
+						
+					</script>
+				</div>
+				<section class='floor-slide'>
+					<div class="floor-banner-slide">
+						<div>
+							<a href='#'><img src="image/bf90b4cc-3416-4bee-a800-2eae80fe647d.jpg" /> </a>
+						</div>
+					</div>
+				</section>
+				<section class='floor-banner'>
+					<div class="floor-banner-main content9">
+						
+					</div>
+				</section>
+				<script>
+						
+						
+				
+					var arr9 = [
+						"image/8745a21c-491f-4439-a039-2dc6de023bf3.jpg",
+						"image/8c464a2b-0c79-4d8f-a3ae-fbfe6ee00db9.jpg",
+						"image/0bf81fcd-0d4b-4eda-8c9a-ed586076888a.jpg",
+						"image/363504bf-f91c-4ab8-acce-08fda934cd62.jpg"
+					
+					]
+					var str2 = ""
+					for(var i=0;i<arr9.length;i++){
+						str2+=`
+							<div class="product-block">
+							<div class='border-animation'>
+								<div class="border-top"></div>
+								<div class="border-right"></div>
+								<div class="border-bottom"></div>
+								<div class="border-left"></div>
+								<div class="img-wrap"><img src="${arr9[i]}" /> </div>
+							</div>
+						</div>
+						`
+					}
+					$(".content9").append(str2)
+			$(function(){
+				
+				$(".content2>.border-animation").mouseover(function(){
+							$(this).children(".border-top").css("width",272);
+							$(this).children(".border-right").css("height",182);
+							$(this).children(".border-bottom").css("width",272);
+							$(this).children(".border-left").css("height",182);
+						})
+						$(".product-block>.border-animation").mouseout(function(){
+							$(this).children(".border-top").css("width",0);
+							$(this).children(".border-right").css("height",0);
+							$(this).children(".border-bottom").css("width",0);
+							$(this).children(".border-left").css("height",0);
+						})
+						$(".content2>div>a>img").pictureLight(0.8);
+			})
+					
+							
+					
+					
+				</script>
+			</div>
+			</div>
+			<div class="yt-card">
+				<div class="public-one"><a href="#"><img src='image/06e60098-7adc-438c-8a9d-2b9970851ee3.jpg'/></a></div>
+				<div class="public-two"><a href="#"><img src='image/5de0cee3-4fb4-49df-b19e-904f6b003482.jpg'/></a></div>
+				<div class="public-three"><a href="#"><img src='image/28145a12-7d18-4a30-96be-bc5f5c4a5ebe.jpg'/></a></div>
+			</div>
+			<div class='foot'>
+				<span class="service">
+		            <strong>400-119-1111</strong><i>8:00-24:00</i>
+		            <b>service@yintai.com</b>
+		        </span>
+		        <span class="delivery">
+		            <strong><i>15天</i>无忧退换货</strong>
+		            <b>为您提供优质售后服务</b>
+		        </span>
+		        <span class="genuine">
+		            <strong><i>100%</i>正品保证</strong>
+		            <b>品质护航 购物无忧</b>
+		        </span>
+		        <span class="freight">
+		            <strong><i>满199元</i>免运费</strong>
+		            <b>为您提供便利物流</b>
+		        </span>
+			</div>
+			
+				<div class="ilinks">
+                	<a href="#" >关于银泰</a>|
+                	<a href="#" >帮助中心</a>|
+                	<a href="#" >网站地图</a>|
+                	<a href="#">企业客户</a>|
+                	<a href="#">代理合作</a>|
+                	<a href="#">品牌招商</a>|
+                	<a href="#" >商务合作</a>|
+                	<a href="#">网站联盟</a>|
+                	<a href="#" >联系我们</a>|
+                	<a href="#" >加入银泰</a>|
+                	<a href="#" >版权声明</a>|
+                	<a href="#">法律声明</a>
+            	</div>
+            	<div class="copyright">
+	                <p>
+	                    <a href="#">浙ICP备10200233号</a>
+	                    <a href="#">京公网安备110105019085</a>
+	                    <a href="#">增值电信业务经营许可证：浙B2-20110005</a>
+	                </p>
+	                <p>Yintai © 2014, 银泰电子商务有限公司.</p>
+            	</div>
+            	<div class="last">
+            		<a href="" style="width: 112px;height: 40px;"><img src="image/yt-ntegrity.png" /> </a>
+            		<a href="" style="width: 102px;height: 40px;"><img src="image/cnnic.png" style="width: 102px;height: 40px;"/> </a>
+            		<a href="" style="width: 48px;height: 48px;"><img src="image/commerce.gif" /> </a>
+            	</div>
+			
+			
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,457 @@
+.doc{
+	width: 100%;
+    min-width: 1190px;
+    background-color:#eee
+}
+.h-top{
+    height: 120px;
+    background-color: #fff;
+}      
+.h-top .top-main{
+	width: 1190px;
+    margin: 0 auto;
+    height: 120px;
+}
+.h-top .top-main h1{
+	float: left;
+    width: 215px;
+    height: 76px;
+    margin-top: 21px;
+}
+.h-top .top-main h1 a{
+	display: block;
+    overflow: hidden;
+    width: 215px;
+    height: 76px;
+    text-indent: -999px;
+    background: #eee url(../image/header-20160223.gif) 0 0 no-repeat;
+}
+.doc .bd{
+	width: 980px;
+    margin: 0 auto;
+    clear: both;
+    overflow: hidden;
+}
+.doc .bd img{
+	width: 980px;
+}
+.doc .bd .bdwraper{
+	width: 940px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    overflow: hidden;
+}
+.bd .bdwraper .carsteps{
+	height: 80px;
+    margin-bottom: 10px;
+}
+.carsteps h2{
+	float: left;
+    width: 112px;
+    height: 80px;
+    text-indent: -999px;
+    overflow: hidden;
+    background: url(../image/shopping-head.jpg) 0 0 no-repeat;
+}
+.carsteps .sp-step{
+	padding-top: 3px;
+    float: right;
+    margin-right: 10px;
+    display: inline;
+    background: url(../image/shopping-head.jpg) -158px 5px no-repeat;
+}
+.carsteps .sp-step span{
+    float: left;
+    vertical-align: top;
+    text-align: center;
+    font-family: "\5fae\8f6f\96c5\9ed1";
+    color: #999;
+}
+.carsteps .sp-step .clickone{
+	background: url(../image/shopping-head.jpg) -158px 52px no-repeat;
+    font-size: 14px;
+    color: #e4004d;
+    width: 76px;
+}
+.sp-step .clickone em{
+	padding-top: 18px;
+    color: #e4004d;
+        display: block;
+        font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    font-family: Verdana;
+    font-size: 10px;
+}
+.sp-step .clicktwo{
+	    width: 402px;
+}
+.sp-step .clicksan{
+	    width:60px;
+}
+.carbox .emptycar{
+	display: none;
+	width: 940px;
+    height: 285px;
+    background: url(../image/coupon-bg_20131012.png) 0 0 repeat-x;
+    margin: 10px auto;
+}
+.emptycar .explain{
+	height: 148px;
+    padding: 72px 0 0 281px;
+}
+.emptycar .explain .ico{
+	float: left;
+    width: 108px;
+    height: 144px;
+    margin-right: 30px;
+    background: url(../image/shopping-head.jpg) -754px 0 no-repeat;
+}
+.explain .detail h3{
+	font-size: 14px;
+    padding-top: 27px;
+    height: 26px;
+    white-space: nowrap;
+}
+.explain .detail p{
+	height: 38px;
+}
+.explain .detail .c-btn{
+    padding: 7px 16px 9px;
+    font-weight: 700;
+    height: 35px;
+    background: #525252;
+    color: #eee;
+    border: 1px solid #333;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    overflow: visible;
+    outline: none;
+}
+.ditycate{
+    height: 30px;
+    background-color: #666;
+}
+.ditycate span{
+    float: left;
+    line-height: 30px;
+    text-align: left;
+    font-weight: 700;
+    overflow: hidden;
+    color: #fff;
+}
+.ditycate .th-chk{
+    width: 103px;
+    padding-left: 27px;
+}
+.ditycate .th-chk span{
+	position: relative;
+    display: inline-block;
+    zoom: 1;
+    width: 14px;
+    height: 13px;
+    margin-top: 10px;
+    overflow: hidden;
+    vertical-align: top;
+}
+.ditycate .th-chk input{
+	position: absolute;
+	background: white;
+    left: 0px;
+    top: -4px;
+    width: 14px;
+    height: 13px;
+}
+.ditycate .th-item{
+    width: 372px;
+}
+.ditycate .th-price{
+	width: 130px
+}
+.ditycate .th-amount{
+    width: 66px;
+    padding-right: 60px;
+    text-align: center;
+}
+.ditycate .th-sum{
+	width: 90px;
+}
+.ditycate .th-op{
+    width: 92px;
+}
+.ditybox{
+    width: 940px;
+    margin-bottom: 10px;
+}
+.ditytitle{
+    clear: both;
+    position: relative;
+    height: 30px;
+    border: 1px solid #e2e2e2;
+    border-bottom: none;
+    background-color: #eee;
+}
+.ditytitle .vitiehead{
+	position: absolute;
+    top: -1px;
+    left: -10px;
+    height: 40px;
+    overflow: hidden;
+    padding-left: 10px;
+}
+.ditytitle .vitiehead h3{
+    line-height: 30px;
+    color: #666;
+    padding: 0 32px 0 10px;
+    font-size: 12px;
+}
+.ditylist{
+	clear: both;
+    display: block;
+    position: relative;
+    zoom: 1;
+    width: 938px;
+    border: 1px solid #e2e2e2;
+    border-top: none;
+    overflow: hidden;
+   
+}
+.ditylist .cpproduct{
+    position: relative;
+    padding: 15px 0 0;
+    border-bottom: 1px solid #e2e2e2;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.cpproduct .th-chk{
+	width: 40px;
+    height: 62px;
+    padding-left: 26px;
+    float: left;
+}
+.cpproduct .th-chk div{
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    overflow: hidden;
+    vertical-align: top;
+    margin-top: 14.5px;
+}
+.cpproduct .th-chk input{
+	position: absolute;
+	background: white;
+    left: 0px;
+    top: -4px;
+    width: 14px;
+    height: 13px;
+}
+.cpproduct .th-item{
+    width: 435px;
+    float: left;
+}
+.cpproduct .property{
+    width: 425px;
+    margin-bottom: 10px;
+}
+.cpproduct .property .pro-img{
+	float: left;
+    width: 45px;
+    height: 60px;
+    margin-right: 10px;
+    overflow: hidden;
+    border: 1px solid #efefef;
+    background-color: #fff;
+}
+.cpproduct .property .pro-img img{
+    vertical-align: top;
+    width: 45px;
+    height: 60px;
+}
+.cpproduct .pro-title{
+	float: left;
+    width: 328px;
+    position: relative;
+}
+.cpproduct .pro-pro{
+	float: left;
+    width: 328px;
+    position: relative;
+}
+.cpproduct .property .pro-check{
+	height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 328px;
+}
+.cpproduct .property .pro-check span{
+    margin-right: 10px;
+    color: #999;
+}
+.cpproduct .th-price{
+    width: 130px;
+    float: left;
+}
+.cpproduct .th-price div{
+	margin-top: 11px;
+}
+.cpproduct .th-price strong{
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+    color: #e5004f;
+    padding-right: 8px;
+}
+.cpproduct .th-price strong em{
+    font-weight: 700;
+    font-style: normal;
+}
+.cpproduct .th-price .hidden{
+	display: none;
+}
+.cpproduct .th-amount{
+	width: 66px;
+    height: 20px;
+    padding-right: 60px;
+    text-align: center;
+    margin-top: 11px;
+    float: left;
+}
+.cpproduct .pro-number{
+	position: relative;
+    width: 64px;
+    margin: 0 auto;
+    text-align: center;
+    color: #666;
+}.cpproduct .pro-number input{
+	position: absolute;
+    left: 17px;
+    top: 0;
+    z-index: 1;
+    width: 28px;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #666;
+}
+.cpproduct .pro-number a{
+	position: absolute;
+    width: 16px;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+    border: 1px solid #dfdfdf;
+    background-color: #eee;
+    color: #666;
+}
+.cpproduct .pro-number .nums-red{
+	left: 0;
+    top: 0;
+    z-index: 2;
+}
+.cpproduct .pro-number .nums-add{
+	right: 0;
+    top: 0;
+    z-index: 2;
+}
+.cpproduct .th-sum{
+	width: 90px;
+    line-height: 20px;
+    margin-top: 11px;
+    float: left;
+}
+.cpproduct .th-op{
+	width: 91px;
+    float: left;
+}
+.cpproduct .decidetime{
+    position: relative;
+}
+.cpproduct .decidetime a{
+	display: block;
+    width: 52px;
+    height: 18px;
+    padding-left: 16px;
+    color: #666;
+    background: url(../image/shopping-icon.png) 0 -177px no-repeat;
+}
+.cpproduct .decidetime .pro-collect{
+    background-position: 0 -92px;
+}
+.cpproduct .decidetime .pro-remove{
+    background-position: 1px -125px;
+}
+.paytable{
+    width: 938px;
+    margin: 10px 0 20px;
+    border: solid #ddd;
+    border-width: 1px 1px 2px;
+    background-color: #eee;
+}
+.paytable .payfor{
+	width: 938px;
+    height: 65px;
+}
+.paytable .payfor .payofcon{
+	width: 886px;
+    height: 42px;
+    padding: 8px 26px 15px;
+    position: static;
+    left: auto;
+    bottom: 0;
+    z-index: 99;
+    background-color: #eee;
+}
+.payfor .payofcon .acountbox{
+	float: right;
+    width: 147px;
+    height: 43px;
+    margin-left: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    background: url(../image/shopping-submit.png) 0 0 no-repeat;
+}
+.payofcon .acountnum{
+    float: right;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+.payofcon .acountnum .cue{
+	font-size: 12px;
+    font-weight: 400;
+    margin-left: -5px;
+    font-style: normal;
+    color: #666;
+}
+.payofcon .acountnum .pay{
+	padding: 0 5px;
+    font-size: 16px;
+    font-family: Verdana;
+    color: #e5004f;
+    vertical-align: middle;
+}
+.payofcon .acountnum .math{
+    color: #bfbebe;
+    font-size: 12px;
+    font-weight: 400;
+    vertical-align: middle;
+}
+.payofcon .acountnum .integral{
+	padding-left: 5px;
+    font-size: 14px;
+    font-family: Verdana;
+    font-weight: 400;
+    color: #666;
+}

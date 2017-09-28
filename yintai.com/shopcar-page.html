@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>         
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/Home_page.css"/>
+		<link rel="stylesheet" type="text/css" href="css/list_page.css"/>
+		<link rel="stylesheet" type="text/css" href="css/shopcar.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+	</head>
+	<body>
+		<div class="doc">
+			<div id="header"></div>
+			<div class="h-top">
+				<div class="top-main">
+					<h1><a href="home_page.html">银泰网</a></h1>
+				</div>
+			</div>
+			<div class="bd">
+				<img id="pcAdtImg" src="image/mobile-adt.png" width="980" alt="移动端首单立减图片" title="移动端首单立减图片">
+				<img src="image/mobile-adt.png"/>
+				<div class="bdwraper">
+					<div class="carsteps">
+						<h2>购物车</h2>
+						<div class="sp-step">
+							<span class="clickone click-one">查看购物袋<em>STEP 1</em></span>
+							<span class="clicktwo">填写订单信息<em>STEP 2</em></span>
+							<span class="clicksan">订单确认<em>STEP 3</em></span>
+						</div>
+					</div>
+					<div class="carbox">
+						
+						</div>
+					 </div>
+				</div>
+			</div>
+		</div>	
+		<div id="foot"></div>
+	</body>
+	<script type="text/javascript" src="js/cookie.js" ></script>
+	<script>
+		$(function(){
+			var oldCookie = getCookie(".bd"); //
+			var str = "";
+			console.log(oldCookie)
+			for(var i =0;i<oldCookie.length;i++){
+				shopinfo = oldCookie[i];
+				str+=`
+					<div class="carbox">
+						<div class="ditycar">
+							<div class="ditycate">
+								<span class="th-chk"><span>
+								<input type="checkbox" id="J-UpCheck" checked>
+								</span>&nbsp;全选</span>
+								<span class="th-item">商品</span>
+								<span class="th-price">单价</span>
+								<span class="th-amount">数量</span>
+								<span class="th-sum">获得积分</span>
+								<span class="th-op">操作</span>
+							</div>
+							<div class="ditybox">
+								<div class="ditytitle">
+									<div class="vitiehead"><h3>普通商品</h3></div>
+								</div>
+								<div class="ditylist">
+									<div class="cpproduct">
+										<div class="th-chk">
+											<div>
+												<input type="checkbox" checked data-clk="clkcartcheckboxall">
+												
+											</div>
+										</div>
+										<div class="category th-item">
+											<div class="property cf">
+												<div class="pro-img">
+													<a title="adidas阿迪达斯女装运动短裙2017新款网球运动服S98986" target="_blank" href="http://item.yintai.com/21-421-8701.html">
+														<img alt="" src="${shopinfo.src}">
+													</a>	
+												</div>
+												<p class="pro-title">
+													<a href="#" title="adidas阿迪达斯女装运动短裙2017新款网球运动服S98986" target="_blank">${shopinfo.name}</a>
+												</p>
+												<div class="pro-pro">
+													<p class="pro-check">
+														<span>颜色：<b>神秘蓝/基础绿</b></span>
+														<span>尺码：<b>S</b></span>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="th-price">
+											<div class="pro-price" style="margin-top: 11px;">
+												<strong><em>${shopinfo.price}</em></strong>
+												<b class="integral hidden">+<i>0</i>积分</b>
+											</div>
+										</div>
+										<div class="category th-amount" style="margin-top: 11px;">
+											<div class="pro-number">
+												<a href="javascript:void(0)" title="减少" class="nums-red disable">-</a>
+												<input type="text" class="pro-nums" value="${shopinfo.count}" lastvalue="1">
+													<a href="javascript:void(0)" title="增加" class="nums-add">+</a>
+											</div>
+										</div>
+										<div class="th-sum" style="margin-top: 11px;">498</div>
+										<div class="th-op" style="margin-top: 3px;">
+											<div class="decidetime">
+												<a class="pro-collect" href="javascript:void(0)">移入收藏</a>
+											</div>
+											<div class="decidetime" data-id=${shopinfo.id} data-title=${shopinfo.name} data-price=${shopinfo.price} data-src=${shopinfo.src}>
+												<a class="pro-remove" href="javascript:void(0)">删除商品</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="paytable">
+								<div class="payfor">
+									<div class="payofcon">
+										<div class="acountbox"></div>
+										<div class="acountnum">结算金额：
+											<i class="cue">(已免运费)</i>
+											<strong class="pay">${shopinfo.price}*${shopinfo.count}</strong>
+											<span class="math hidden J-math"">+
+												<strong class="integral">0</strong>
+												<s>积分</s>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+				
+				
+				`
+				
+				
+			}
+			$(".carbox").append(str)
+			$(".pro-remove").click(function(){
+				var id = $(this).parentsUntil(".jay").data("id");
+				var name = $(this).parentsUntil(".jay").data("title");
+				console.log(id);
+				console.log(name)
+				if( confirm("确定要删除么？") ){
+					for(var i = 0 ; i < oldCookie.length ; i++){
+						if( id == oldCookie[i].id && name == oldCookie[i].name ){//找到了cookie数据中要删除的商品
+							oldCookie.splice(i,1);
+							
+							//重新设置cookie
+							setCookie(".bd",JSON.stringify(oldCookie));
+							
+							break;
+						}
+					}
+					$(this).parentsUntil(".ditycar").remove();
+				}
+				
+				
+			})
+			<!--cookie-->
+		var height = window.innerHeight;
+		var Top = $(".payfor").height()
+		console.log(Top);
+		console.log(height)
+		$(window).scroll(function(){
+			var sTop = $(document).scrollTop();
+//			console.log(sTop)
+			if( sTop < height -Top-300){ //吸顶条件
+//				console.log(height +Top);
+			console.log(1)
+	    		$(".payfor").css({"position":"fixed","top":height-Top})
+	    		//console.log( $(".payfor").css("top") );
+	    	}else{
+	    		$(".payfor").css({"position":""})
+	    	}
+		})
+		$("#foot").load("data/active.html .fot")
+			
+		$("#header").load("data/active.html #hd",function(){
+			$(".icart").hover(function(){
+    			$("#J-ShopCart").show();
+		    },function(){
+    			$("#J-ShopCart").hide()
+		    })
+		$(".log-yt-home .log-link").mouseover(function(){
+				$(".yt-myhome").css({"display":"block"});
+				$(this).css("background","white");
+				$(this).children("b").css({"backgroundPosition":"-175px -128px",
+	"transform":"rotate(180deg)"})
+				$(this).children(".blank").css("display","block")
+			})
+			$(".log-yt-home .log-link").mouseout(function(){
+				$(".yt-myhome").css({"display":"none"});
+				$(this).css("background","");
+				$(this).children("b").css({"backgroundPosition":"-175px -111px",
+	"transform":"rotate(0deg)"})
+				$(this).children(".blank").css("display","none")
+			})
+			$(".top-entry li .collect").mouseover(function(){
+				$(this).children("s").css({"backgroundPosition":"-225px -27px"})
+			})
+			$(".top-entry li .collect").mouseout(function(){
+				$(this).children("s").css({"backgroundPosition":"-225px 0px"})
+			})
+			$(".log-wechat .wechat1").mouseover(function(){
+				$(this).css({"background":"white"})
+				$(this).children("s").css({"backgroundPosition":"-225px -87px"});
+				$(this).children("b").css({"backgroundPosition":"-175px -128px",
+				"transform":"rotate(180deg )"});
+				$(this).children(".blank").css({"display":"block"})
+				$(".yt-wechat").css({"display":"block"})
+			})
+			$(".log-wechat .wechat1").mouseout(function(){
+				$(this).css({"background":""})
+				$(this).children("s").css({"backgroundPosition":"-225px -57px"});
+				$(this).children("b").css({"backgroundPosition":"-175px -111px",
+				"transform":"rotate(0)"});
+				$(this).children(".blank").css({"display":"none"});
+				$(".yt-wechat").css({"display":"none"})
+				
+			})
+	//							手机银泰
+			$(".log-yt-phone .log-link").mouseover(function(){
+				$(this).css({"background":"white"})
+				$(this).children("s").css({"backgroundPosition":"center bottom"});
+				$(this).children("b").css({"backgroundPosition":"-175px -128px",
+				"transform":"rotate(180deg)"});
+				$(this).children(".blank").css({"display":"block"})
+				$(".yt-phone").css({"display":"block"})
+			})
+			$(".log-yt-phone .log-link").mouseout(function(){
+				$(this).css({"background":""})
+				$(this).children("s").css({"backgroundPosition":"center 0"});
+				$(this).children("b").css({"backgroundPosition":"-175px -111px",
+				"transform":"rotate(0)"});
+				$(this).children(".blank").css({"display":"none"});
+				$(".yt-phone").css({"display":"none"})
+				
+				
+				
+			})
+			
+		
+			})
+		})
+	</script>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/register_page.css" />
+		<link rel="stylesheet" href="css/login_page.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+	</head>
+	<body>
+		<div class='doc'>
+			<div id='header'>
+			
+			</div>
+			<div class="main">
+				<div class='start'>
+					<div class='Left'>
+						<img src="image/c10b98c1-1e60-4f64-b648-f544a066b8fd.jpg" /> 
+					</div>
+					<div class='Right' style="position: relative;">
+						<div class="top-login">
+						<div class='shadow'>
+							<div class='bb'>
+								<div class='tip'>温馨提示</div>
+								<div class="word"></div>
+								<div class="close">
+									<div class="rule">确定</div>
+								</div>
+							</div>
+						</div>
+							<ul>
+								<li class='active' id='first'>银泰护照<b></b></li>
+								<li id='idea'>银泰网账号<b></b></li>
+								<li>APP扫码登录</li>
+							</ul>
+							<div class="logintab">
+								<div class="inp-wrap">
+									<img src="image/ueser-img-75da284743.png" width="25" height="25">
+									<input type="text" placeholder="请输入银泰护照号(手机号)" id="name"/>	
+								</div>
+								<div class="inp-wrap no-bor">
+									<img src="image/pass-img-c8ba68915f.png" width="25" height="25">
+									<input type="password" placeholder="请输入密码" id="pass"/>
+								</div>
+								<div class="inp-wrap no-bor getcode" style="display: none;">
+					                <input type="text" placeholder="请输入验证码" id="Code"><span class="yanz"></span>
+					            </div>
+					            <div id="btn">登录</div>
+					            <div class="login-reg">
+					            	<a class="a1">忘记密码？</a>
+					            	<a class="a2">注册</a>
+					            </div>
+								
+							</div>
+						</div>
+						<div class="bom-login">
+							<div class="bom-ui">
+								<h3>您可以使用合作网站账号登录</h3>
+								<p></p>
+							</div>
+							<div class="bom-list">
+								<a href="">QQ</a>
+								<a href="">支付宝</a>
+								<a href="">微博</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='foot'>
+				<span class="service">
+		            <strong>400-119-1111</strong><i>8:00-24:00</i>
+		            <b>service@yintai.com</b>
+		        </span>
+		        <span class="delivery">
+		            <strong><i>15天</i>无忧退换货</strong>
+		            <b>为您提供优质售后服务</b>
+		        </span>
+		        <span class="genuine">
+		            <strong><i>100%</i>正品保证</strong>
+		            <b>品质护航 购物无忧</b>
+		        </span>
+		        <span class="freight">
+		            <strong><i>满199元</i>免运费</strong>
+		            <b>为您提供便利物流</b>
+		        </span>
+			</div>
+			
+				<div class="ilinks">
+                	<a href="#" >关于银泰</a>
+                	<a href="#" >帮助中心</a>
+                	<a href="#" >网站地图</a>
+                	<a href="#">企业客户</a>
+                	<a href="#">代理合作</a>
+                	<a href="#">品牌招商</a>
+                	<a href="#" >商务合作</a>
+                	<a href="#">网站联盟</a>
+                	<a href="#" >联系我们</a>
+                	<a href="#" >加入银泰</a>
+                	<a href="#" >版权声明</a>
+                	<a href="#">法律声明</a>
+            	</div>
+            	<div class="copyright">
+	                <p>
+	                    <a href="#">浙ICP备10200233号</a>
+	                    <a href="#">京公网安备110105019085</a>
+	                    <a href="#">增值电信业务经营许可证：浙B2-20110005</a>
+	                </p>
+	                <p>Yintai © 2014, 银泰电子商务有限公司.</p>
+            	</div>
+            	<div class="last">
+            		<a href="" style="width: 112px;height: 40px;"><img src="image/yt-ntegrity.png" /> </a>
+            		<a href="" style="width: 102px;height: 40px;"><img src="image/cnnic.png" style="width: 102px;height: 40px;"/> </a>
+            		<a href="" style="width: 48px;height: 48px;"><img src="image/commerce.gif" /> </a>
+            	</div>
+		</div>
+	</body>
+	<script>
+		var flag = true;
+		$("#header").load("data/head_foot.html #hd");
+		$("#foot").load("data/head_foot.html #ft");
+		$(".top-login ul li").click(function(){
+			$(this).addClass("active").siblings().removeClass("active")
+			
+		})
+		$(".top-login ul li:last").click(function(){
+			$(".logintab").hide();
+			
+		})
+		$("#idea").click(function(){
+			$(".logintab").show();
+			$(".inp-wrap>input")[0].setAttribute("placeholder","请输入手机/邮箱")
+		})
+		$("#first").click(function(){
+			$(".logintab").show();
+			$(".inp-wrap>input")[0].setAttribute("placeholder","请输入银泰护照号(手机号)")
+		})
+	</script>
+	<script>
+	$(".shadow").hide();
+	$(".shadow .rule").click(function(){
+		$(".shadow").hide();
+	})
+	$("#btn").click(function(){
+		console.log($('#pass').val())
+		var deff = $.ajax({
+			type:"get",
+			url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+			data:{
+				status:"login",
+				userID: $("#name").val(),
+				password:$('#pass').val()
+
+			}
+		});
+		deff.done(function(msg){
+			console.log(msg)
+			switch(msg){
+				case "0" : $(".shadow").show();$(".shadow .word").html("用户不存在");break;
+				case "2" : $(".shadow").show();$(".shadow .word").html("用户名与密码不符");break;
+				default : $(".shadow").show();$(".shadow .word").html("登陆成功");
+							setTimeout(function(){
+								location.href = "http://localhost/yinyan/yintai.com/home_page.html";
+							},3000);
+			}
+		})
+	})
+
+	</script>
+</html>

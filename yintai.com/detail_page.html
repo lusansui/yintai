@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/detail.css"/>
+		<link rel="stylesheet" type="text/css" href="css/Home_page.css"/>
+		<link rel="stylesheet" type="text/css" href="css/list_page.css"/>
+		<script type="text/javascript" src="js/cookie.js" ></script>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+	</head>
+	<body>
+		<div class="doc">
+			<div id="header"></div>
+			<div class="bd">
+			<script>
+				var str = location.href;
+				var arr = str.split("?")[1];//id=shop06&cid=classify001
+			//console.log(arr)
+			    //arr = arr.split("&");//["id=shop06","cid=classify001"]
+				var id = arr.split("=")[1];
+				console.log(id)
+				$.ajax({
+					type:"get",
+		url:"data/data.json",
+					success:function(msg){
+						for( var i in msg ){
+							if( id == msg[i].id ){ //满足这个条件的对象就是 要显示的详情信息对象
+								
+								
+								$(".bd").html(`
+			<div class="grid">
+					<div class="crumbs">
+						<span><a href="#">首页</a>&nbsp;&gt;&nbsp;</span>
+						<span><a href="#">运动</a>&nbsp;&gt;&nbsp;</span>
+						<span><a href="#">运动休闲服 </a>&nbsp;&gt;&nbsp;</span>
+						<span><a href="#">裙装 </a>&nbsp;&gt;&nbsp;</span>
+						<span><a href="#">Adidas</a>&nbsp;&gt;&nbsp;</span>
+						<span><a href="#">${msg[i].name}</a></span>
+					</div>
+					<div class="pro-goods">
+						<div class="place">
+							<div class="p-info">
+								<h1 class="p-tit">
+        						${msg[i].name}
+								</h1>
+								<div class="priceinfo">
+									<p class="ytprice">
+							            <span>银泰价：</span><strong class="yt-num">${msg[i].price1}<em>.00</em></strong>
+							       
+							        </p>
+							        <div class="marketprice">
+							        	<div class="marketpricenum">
+							        		参考价
+							        		<span class="mk-num">${msg[i].price2}<em>.00</em></span>
+							        	</div>
+							        </div>
+								</div>
+								<div class="benefit">
+									<div>
+			                            <span class="yellowLabel"><strong>特例</strong><em></em></span>
+			                        </div>
+								</div>
+								<div class="productinfo">
+									<div class="shopcarskin">
+										<p class="noticeinfo">请选择您要的商品信息<b class="J_Close">X</b></p>
+										<div class="productsku">
+											<dl class="">
+				                                <dt class="sel-show s-s-color">选择颜色：</dt>
+				
+					                            <dd class="sel">
+			                                        <div class="item selected">
+			                                            <b></b>
+			                                            <a title="黑色" href="Javascript:void(0);">
+			                                                <img width="30" height="30" alt="黑色" src="//p10.ytrss.com/product/21/161/2093/ColorImage/37466.jpg">
+			                                                <span>黑色</span>
+			                                            </a>
+						                            </div>
+				                            	</dd>
+				                        	</dl>
+											<dl class='selsize'>
+												<dt class="sel-show s-s-size"><span>选择尺码</span>：</dt>
+												<dd class="sel">
+					                                    <div class="sizeintro">
+					                                        <a id="Y_SizeTips" title="尺码说明" href="javascript:;">
+					                                            <span>尺码说明</span>
+					                                        </a>
+					                                    </div>
+					                                
+					
+					                                    <div class="item  soldout">
+					                                        <b></b>
+					                                        <a rel="21-161-2093$" title="xs" href="javascript:void(0);"><span>xs</span></a>
+					                                    </div>
+					                                    <div class="item ">
+					                                        <b></b>
+					                                        <a rel="21-161-2094$" title="S" href="#"><span>S</span></a>
+					                                    </div>
+					                                    <div class="item ">
+					                                        <b></b>
+					                                        <a rel="21-161-2095$" title="M" href="#"><span>M</span></a>
+					                                    </div>
+					                                    <div class="item  selected">
+					                                        <b></b>
+					                                        <a rel="21-161-2096$" title="L" href="javascript:void(0);"><span>L</span></a>
+					                                    </div>
+					                                    <div class="item  soldout">
+					                                        <b></b>
+					                                        <a rel="21-161-2097$" title="XL" href="javascript:void(0);"><span>XL</span></a>
+					                                    </div>
+					                            </dd>
+											</dl>
+											<div class="buy">
+												<div id="setcount">
+													<div class="fl">
+														<input type="number" id="buynum" value="1" min="1" max="99">
+													</div>
+													<div class="fl">
+														<a id="addnum" href="javascript:;"></a>
+														<a id="reducenum" href="javascript:;"></a>
+													</div>
+												</div>
+												<div class="addcart">
+													<button class='buynow'></button>
+													<button class='incart'></button>
+													<span style='display:none;'data-id=${msg[i].id} data-title=${msg[i].name} data-price=${msg[i].price1} data-src=${msg[i].image}>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="picbox">
+								<div class="pictab">
+									<div>
+										<div class="picshow">
+												<img src="${msg[i].image}" style="z-index: 1;"/>
+												<img src='image/64795.jpg'/>
+												<img src='image/27475.jpg' />
+												<img src='image/59342.jpg' />
+												<img src='image/35870.jpg'/>
+												<div class="mask" style="display: none;"></div>
+												
+											
+											<div class="bigpic" style="display: none;">
+												<img src="${msg[i].image}" style="z-index: 1;" class='bigimg'/>
+												<img src='image/64795.jpg' class='bigimg'/>
+												<img src='image/27475.jpg' class='bigimg'/>
+												<img src='image/59342.jpg' class='bigimg'/>
+												<img src='image/35870.jpg' class='bigimg'/>
+											</div>
+										</div>
+										<div class="photoshow">
+											<div class="horizon">
+												<div class="e-clip">
+													<ul class="smallpic">
+														<li><a><img src='${msg[i].image}'/></a></li>
+														<li><a><img src='image/64795.jpg'/></a></li>
+														<li><a><img src='image/27475.jpg'/></a></li>
+														<li><a><img src='image/59342.jpg'/></a></li>
+														<li><a><img src='image/35870.jpg'/></a></li>
+													</ul>
+												</div>
+												<div class="picpre"></div>
+												<div class="picnext"></div>
+											</div>
+										</div>
+										<!--放大镜-->
+									
+									<div class="clear"></div>	
+									</div>
+								</div>
+								<div class="prosns">
+									<div class="procode">
+										<p class="p-sku">商品编号：<span>21-161-2095</span></p>
+									</div>
+									<div class="proshare">
+										<a href="#" class="keep"><span>收藏</span></a>
+										<div id="wechat">
+										
+											<a class="wechat"><span>微信</span></a>
+											<div class="wechatbox" style="display:none;">
+								                <a href="javascript:;" class="wechatcode">
+								                    <img src="image/下载.png" width="84" height="84">
+								                </a>
+								                <div class="wechatwords">
+								                    <p>用微信扫描二维码</p>
+								                    <p>分享至好友或朋友圈</p>
+								                </div>
+								            </div>
+							            	
+										</div>
+							            <div id="snsshare">
+							            
+											<a href="" class="snsshare"><span>分享</span></a>
+											<div class="snsbox" style="display: none;">
+								                <div class="RenRen">
+								                    <a href="#"></a>
+								                    <span>人人网</span>
+								                </div>
+								                <div class="Weibo">
+								                    <a href="#"></a>
+								                    <span>新浪微博</span>
+								                </div>
+								                <div class="TXWB">
+								                    <a href="#"></a>
+								                    <span>腾讯微博</span>
+								                </div>
+								                <div class="QZone">
+								                    <a href="#"></a>
+								                    <span>QQ空间</span>
+								                </div>
+								            </div>
+							            	
+							            </div>
+									</div>
+								</div>
+							</div>
+							<div class="serviceinfo">
+								<dl class="service">
+							        <dt>服务承诺：</dt>
+							        <dd>
+							            <span>正品保障</span>
+							                     <span>支持无理由退换货</span>
+							
+							            
+							                <span>免运费</span>
+							            
+							        </dd>
+							    </dl>
+							</div>
+						</div>
+						<div class="cooper">
+							<div class="logoarea">
+								<a href="#"><img src="image/brand-442.jpg" /> </a>
+								<h4 class="cooper-name">
+				                    <a target="_blank" href="#">Adidas</a>
+				                </h4>
+							</div>
+						</div>
+					</div>
+					<!--下半部分-->
+					<div class="maincon">
+						<div class="prodec">
+							<div class="decbar">
+								<div id="decin">
+								
+									<button class="decincart">
+										
+									</button>
+									<div class="minishopcar">
+										<div class="minishoppic">
+											<img src="image/37466.jpg"/>
+										</div>
+										<div class="minishopinfo">
+											<h3>adidas阿迪三叶草女子三叶草系列连衣裙AY8123</h3>
+											<p><strong class="yt-num">银泰价：￥278.<em>00</em></strong></p>
+										</div>
+									</div>
+									
+								</div>
+								<section class='mobilbuy'>
+									<a>手机下单更便捷</a>
+									<div class="qrcode">
+										<img src="image/下载.png" alt="" />
+									</div>
+								</section>
+								<ul class='yp-con'>
+									<li class="on">商品介绍</li>
+									<li class="liComment">商品评价</li>
+									<li>商品咨询</li>
+									<li buylink="#">购买须知</li>
+								</ul>
+							</div>
+							<div class="desccon">
+								<h2>商品详情  <span>
+					                        Product Details
+					                    </span>
+					            </h2>
+					            <div class="detail-img">
+									<img src="image/xjzs1.jpg" /> 
+									<img src='image/xjzs2.jpg' />
+									<img src="image/xjzs3.jpg" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+							
+			
+	
+								`);
+			$(".picnext").click(function(){
+				$(".smallpic").animate({"margin-left":-72},1000)
+			})
+			$(".picpre").click(function(){
+				$(".smallpic").animate({"margin-left":0},1000)
+			})
+			$(".smallpic li").mouseover(function(){
+		 		var index = $(this).index();
+		 		$(".picshow img").eq(index).show().siblings("img").hide();
+		 		$(".bigpic img").eq(index).show().siblings().hide();
+		 	})
+			$(".picshow").on({
+				"mouseover":function(){
+					$(".mask").show();
+					$(".bigpic").show();
+				},
+				"mouseout":function(){
+					$(".mask").hide();
+					$(".bigpic").hide();
+				},
+				"mousemove":function(evt){
+					var evt = event||evt;
+					var x = evt.pageX - $(".picshow").offset().left - $(".mask").width()/2;
+		 			var y = evt.pageY - $(".picshow").offset().top - $(".mask").height()/2;
+		 			var maxW = $(".picshow").width() - $(".mask").width();
+		 			var maxH = $(".picshow").height() - $(".mask").height();
+		 			//边界处理
+		 			x = x <= 0 ? 0 : (x>=maxW ? maxW : x);
+		 			y = y <= 0 ? 0 : (y>=maxH ? maxH : y);
+		 			
+		 			$(".mask").css({
+		 				"left" : x + "px",
+		 				"top" :y + "px"
+		 			});
+		 			var bigImgX = x * $(".bigpic").width()/$(".picshow").width();
+		 			var bigImgY = y * $(".bigpic").height()/$(".picshow").height();
+		 			
+		 			$(".bigimg").css({
+		 				"left": -bigImgX + "px",
+		 				"top" : -bigImgY + "px"
+		 			})
+				}
+				
+			})//放大镜
+			$("#wechat").hover(function(){
+        		$(".wechat").css({
+        			"border-color":"#f0f0f0",
+        			"border-bottom-color":"#fff",
+        			"z-index":"40"
+        		})
+        		$(".wechatbox").show()
+        	},function(){
+        		$(".wechat").css({
+        			"border-color":"",
+        			"border-bottom-color":""
+        		})
+        		$(".wechatbox").hide()
+        	})
+			$("#snsshare").hover(function(){
+        		$(".snsshare").css({
+        			"border-color":"#f0f0f0",
+        			"border-bottom-color":"#fff",
+        			"z-index":"40"
+        		})
+        		$(".snsbox").show()
+        	},function(){
+        		$(".snsshare").css({
+        			"border-color":"",
+        			"border-bottom-color":""
+        		})
+        		$(".snsbox").hide()
+        	})
+			$("#decin").hover(function(){
+				$(".minishopcar").show();
+			},function(){
+				$(".minishopcar").hide();
+			})
+			$(".mobilbuy").hover(function(){
+				$(".qrcode").show();
+			},function(){
+				$(".qrcode").hide();
+			})
+			$("#foot").load("data/active.html .fot")
+			$("#header").load("data/title_page.html #hd",function(){
+		
+		$(".icart").hover(function(){
+    			$("#J-ShopCart").show();
+		    },function(){
+    			$("#J-ShopCart").hide()
+		    })
+		$(".log-yt-home .log-link").mouseover(function(){
+				$(".yt-myhome").css({"display":"block"});
+				$(this).css("background","white");
+				$(this).children("b").css({"backgroundPosition":"-175px -128px",
+	"transform":"rotate(180deg)"})
+				$(this).children(".blank").css("display","block")
+			})
+			$(".log-yt-home .log-link").mouseout(function(){
+				$(".yt-myhome").css({"display":"none"});
+				$(this).css("background","");
+				$(this).children("b").css({"backgroundPosition":"-175px -111px",
+	"transform":"rotate(0deg)"})
+				$(this).children(".blank").css("display","none")
+			})
+			$(".top-entry li .collect").mouseover(function(){
+				$(this).children("s").css({"backgroundPosition":"-225px -27px"})
+			})
+			$(".top-entry li .collect").mouseout(function(){
+				$(this).children("s").css({"backgroundPosition":"-225px 0px"})
+			})
+			$(".log-wechat .wechat1").mouseover(function(){
+				$(this).css({"background":"white"})
+				$(this).children("s").css({"backgroundPosition":"-225px -87px"});
+				$(this).children("b").css({"backgroundPosition":"-175px -128px",
+				"transform":"rotate(180deg )"});
+				$(this).children(".blank").css({"display":"block"})
+				$(".yt-wechat").css({"display":"block"})
+			})
+			$(".log-wechat .wechat1").mouseout(function(){
+				$(this).css({"background":""})
+				$(this).children("s").css({"backgroundPosition":"-225px -57px"});
+				$(this).children("b").css({"backgroundPosition":"-175px -111px",
+				"transform":"rotate(0)"});
+				$(this).children(".blank").css({"display":"none"});
+				$(".yt-wechat").css({"display":"none"})
+				
+			})
+	//							手机银泰
+			$(".log-yt-phone .log-link").mouseover(function(){
+				$(this).css({"background":"white"})
+				$(this).children("s").css({"backgroundPosition":"center bottom"});
+				$(this).children("b").css({"backgroundPosition":"-175px -128px",
+				"transform":"rotate(180deg)"});
+				$(this).children(".blank").css({"display":"block"})
+				$(".yt-phone").css({"display":"block"})
+			})
+			$(".log-yt-phone .log-link").mouseout(function(){
+				$(this).css({"background":""})
+				$(this).children("s").css({"backgroundPosition":"center 0"});
+				$(this).children("b").css({"backgroundPosition":"-175px -111px",
+				"transform":"rotate(0)"});
+				$(this).children(".blank").css({"display":"none"});
+				$(".yt-phone").css({"display":"none"})
+				
+				
+				
+			})
+			
+			})//其他功能
+			//购物车
+			
+			$(".bd").on("click",".incart",function(){
+				//alert(1)
+			var arr = [];//用来存放所有购买的商品
+			var proInfo = {
+				"name":$(this).next().data("title"),  //data()方法获取自定义属性值的
+				"price":$(this).next().data("price"), 
+				"src":$(this).next().data("src"), 
+				"id":$(this).next().data("id"),
+				"count": 1   //记录这个商品在购物车中的个数
+			}
+			var flag = true;//当开关的值为true时   可以向数组中push新数据  
+			//当再次点击 或 刷新页面时，会将数组清空，此时cookie的数据也会被清除，要解决数组信息不会被覆盖的问题
+			// 解决办法：  在没将新点击的商品存入到数组之前  可以先将cookie的信息取出来 存到数组中  
+			oldCookie = getCookie(".bd");//取出cookie中的数据
+			
+			if( oldCookie.length!=0 ){//判断cookie中是否有数据，如果有数据，先将原cookie的数据存入到数组中 
+				arr = oldCookie;	//先将原cookie的数据存入到数组中 
+				for(var i = 0 ; i < arr.length ; i++){ //遍历arr   判断 当前点击的对象 在arr中是否存在  如果存在，让 count+1
+					if( proInfo.id == arr[i].id && proInfo.name == arr[i].name ){
+						arr[i].count++;
+						flag = false;
+						break;
+					}
+				}
+			}
+			if( flag ){ //当开关的值为true时   可以向数组中push新数据  
+				arr.push( proInfo );
+			}
+			//将数组信息存入到cookie中
+			setCookie(".bd", JSON.stringify(arr) );
+			
+			if( !confirm("继续购物，点击确定;点击取消 跳转到购物车页面") ){
+				location.href = "shopcar-page.html";
+			}
+			//console.log(oldCookie)
+		})
+			
+							}
+						}
+					}
+				});
+			
+				
+			
+				
+				
+				
+				
+			</script>
+			
+		</div>
+		<div id="foot" style="background: #FFFFFF;">
+					
+		</div>
+	</body>
+<script>
+			
+		
+											
+	
+</html>

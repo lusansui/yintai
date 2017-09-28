@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册页</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/register_page.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+	</head>
+	<body>
+		<div class="doc">
+			<div id='header'></div>
+				
+			<div id="bd">
+				<div class="register-bd">
+					<div class='left'><img src="image/c10b98c1-1e60-4f64-b648-f544a066b8fd.jpg" /> </div>
+					<div class="right">
+						<div class='shadow'>
+							<div class='bb'>
+								<div class='tip'>温馨提示</div>
+								<div class="word"></div>
+								<div class="close">
+									<div class="rule">确定</div>
+								</div>
+							</div>
+						</div>
+						<div class='title'>注册护照</div>
+						<div class='warm'>
+							已注册可
+							<a href='#'>直接登录</a>
+						</div>
+						<div class='create'>
+							<div class="filed">
+								<input id="phone" type="text" value="" placeholder="请输入手机号" >
+							</div>
+							<div class="filed">
+								<input id="Code" type="text" placeholder="请输入验证码">
+								<button type="button" class="getCode" value="获取验证码">重新获取</button>
+									
+							</div>
+							<div class="filed">
+								<input id="pass" type="text" placeholder="请设置银泰护照密码">
+							</div>
+							<div class="filed">
+								<input id="repass" type="text" placeholder="请再次确认银泰护照密码"style="width:60%">
+							</div>
+							<p class="explain">请为护照设置密码（6到12位，英文+数字）</p>
+							<p class="explain">注册关联银泰护照后您可使用护照直接登录银泰网。
+								银泰护照即银泰百货会员，注册后，在银泰百货商场可享受会员待遇，并可共享积分等。
+							</p>
+							<button id='btn' type="button" >创建银泰护照</button>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		
+			
+		<div class='foot'>
+				<span class="service">
+		            <strong>400-119-1111</strong><i>8:00-24:00</i>
+		            <b>service@yintai.com</b>
+		        </span>
+		        <span class="delivery">
+		            <strong><i>15天</i>无忧退换货</strong>
+		            <b>为您提供优质售后服务</b>
+		        </span>
+		        <span class="genuine">
+		            <strong><i>100%</i>正品保证</strong>
+		            <b>品质护航 购物无忧</b>
+		        </span>
+		        <span class="freight">
+		            <strong><i>满199元</i>免运费</strong>
+		            <b>为您提供便利物流</b>
+		        </span>
+			</div>
+			
+				<div class="ilinks">
+                	<a href="#" >关于银泰</a>
+                	<a href="#" >帮助中心</a>
+                	<a href="#" >网站地图</a>
+                	<a href="#">企业客户</a>
+                	<a href="#">代理合作</a>
+                	<a href="#">品牌招商</a>
+                	<a href="#" >商务合作</a>
+                	<a href="#">网站联盟</a>
+                	<a href="#" >联系我们</a>
+                	<a href="#" >加入银泰</a>
+                	<a href="#" >版权声明</a>
+                	<a href="#">法律声明</a>
+            	</div>
+            	<div class="copyright">
+	                <p>
+	                    <a href="#">浙ICP备10200233号</a>
+	                    <a href="#">京公网安备110105019085</a>
+	                    <a href="#">增值电信业务经营许可证：浙B2-20110005</a>
+	                </p>
+	                <p>Yintai © 2014, 银泰电子商务有限公司.</p>
+            	</div>
+            	<div class="last">
+            		<a href="" style="width: 112px;height: 40px;"><img src="image/yt-ntegrity.png" /> </a>
+            		<a href="" style="width: 102px;height: 40px;"><img src="image/cnnic.png" style="width: 102px;height: 40px;"/> </a>
+            		<a href="" style="width: 48px;height: 48px;"><img src="image/commerce.gif" /> </a>
+            	</div>
+		
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$("#header").load("data/head_foot.html #hd");
+			$("#foot").load("http://localhost/zhangWenBo/yintai.com/data/head_foot.html #ft");
+			$(".shadow").hide();
+			$(".shadow .rule").click(function(){
+				$(".shadow").hide();
+			})
+			//手机
+	
+			$(".create .getCode").click(function(){
+				
+				var reg = /^1(3|4|5|7|8)\d{9}$/;
+				if(!reg.test($("#phone").val())){
+					$(".shadow").show();
+					$(".shadow .word").html("请输入正确的手机号");
+					
+					//return false;
+				}
+			})
+			//验证码
+			$(".create #Code").blur(function(){
+				
+				var reg = /^\d{4}$/;
+				if(!reg.test($("#Code").val())){
+					$(".shadow").show();
+					$(".shadow .word").html("请输入正确的验证码");
+				}else{
+					$("#btn").css({"border":"1px solid #e8004c","background": "#f1f1f1","color":" #e8004c"})
+				}
+			})
+			//密码
+			$(".create #pass").blur(function(){
+				
+				var reg = /^[a-zA-Z0-9]{6,12}$/g;
+				if(!reg.test($("#pass").val())){
+					$(".shadow").show();
+					$(".shadow .word").html("请输入6到12位英文+数字的护照密码");
+				}else{
+					$("#btn").css({"border":"1px solid #e8004c","background": "#f1f1f1","color":" #e8004c"})
+				}
+			})
+			//确认密码
+			$(".create #repass").blur(function(){
+				
+				if($("#pass").val() != $("#repass").val()){
+					$(".shadow").show();
+					$(".shadow .word").html("两次输入的密码不一致");
+				}
+			})
+			$("#btn").click(function(){
+				var deff = $.ajax({
+					type:"get",
+					url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+					data:{
+						status:"register",
+						userID:$("#phone").val(),
+						password:$("#password").val()
+					}
+				});
+				deff.done(function(msg){
+					switch(msg){
+						case "0" :$(".shadow").show();$(".shadow .word").html("该用户已经注册了");break;
+						case "1" :$(".shadow").show();$(".shadow .word").html("创建成功,正在跳转");
+							setTimeout(function(){
+								location.href = "http://localhost/zhangWenBo/yintai.com/login.html";
+							},3000)
+							break;
+						case "2" :$(".shadow").show();$(".shadow .word").html("服务器产生错误，稍后再试");break;
+					}
+
+				})
+				deff.error(function(){
+					$(".shadow").show();$(".shadow .word").html("哇哦，请求失败了")
+				})
+			})
+		})
+	</script>
+	
+</html>
